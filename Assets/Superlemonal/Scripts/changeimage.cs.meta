@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f4007af02903d0744a06d9e97bedefd2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_Image: {instanceID: 0}
+  - handnograbby: {fileID: 21300000, guid: c4f6001c577b183498cd13f43131f731, type: 3}
+  - handabouttograbby: {fileID: 21300000, guid: c613cd70165686a468ce4e43c2b2b067,
+      type: 3}
+  - handgrabby: {fileID: 21300000, guid: 7b1d72c0ea8340d4ea439ab7fe012323, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
