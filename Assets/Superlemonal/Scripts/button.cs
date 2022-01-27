@@ -6,6 +6,8 @@ public class button : MonoBehaviour
 {
     public Animator buttonAnimationController;
     public Animator doorAnimationController;
+    public GameObject sign;
+    public Material greenMaterial;
 
     //[SerializeField] private string buttonPress = "ButtonPress";
 
@@ -23,6 +25,7 @@ public class button : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             //Debug.Log("ouch");
+            sign.GetComponent<MeshRenderer>().material = greenMaterial;//continue
             buttonAnimationController.SetBool("bool", true);
             doorAnimationController.SetBool("doorBool", true);
             
