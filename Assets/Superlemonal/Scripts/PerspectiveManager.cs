@@ -105,8 +105,8 @@ public class PerspectiveManager : MonoBehaviour {
 
                 if (takenObject.GetComponent<MeshRenderer>() != null)
                 {
-                    takenObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
-                    takenObject.GetComponent<MeshRenderer>().receiveShadows = false;
+                    //takenObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+                    //takenObject.GetComponent<MeshRenderer>().receiveShadows = false;
                 }
                 takenObject.gameObject.layer = 8;
                 foreach (Transform child in takenObject.GetComponentsInChildren<Transform>())
@@ -177,33 +177,38 @@ public class PerspectiveManager : MonoBehaviour {
         {
             if (takenObject != null)
             {
-                toneAble = true;
-                pop2.Play();
-                toneAble = false;
-
-                takenObject.GetComponent<Rigidbody>().isKinematic = false;
-
-                foreach (Collider col in takenObject.GetComponents<Collider>())
-                {
-                    col.isTrigger = false;
-                }
-
-                if (takenObject.GetComponent<MeshRenderer>() != null)
-                {
-                    //takenObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
-                    //takenObject.GetComponent<MeshRenderer>().receiveShadows = true;
-                }
-                takenObject.transform.parent = null;
-                takenObject.gameObject.layer = 0;
-                foreach (Transform child in takenObject.GetComponentsInChildren<Transform>())
-                {
-                    takenObject.GetComponent<Rigidbody>().isKinematic = false;
-                    takenObject.GetComponent<Collider>().isTrigger = false;
-                    child.gameObject.layer = 0;
-                }
-
-                takenObject = null;
+                releaseObject();
             }
         }
+    }
+
+    public void releaseObject()
+    {
+        toneAble = true;
+        pop2.Play();
+        toneAble = false;
+
+        takenObject.GetComponent<Rigidbody>().isKinematic = false;
+
+        foreach (Collider col in takenObject.GetComponents<Collider>())
+        {
+            col.isTrigger = false;
+        }
+
+        if (takenObject.GetComponent<MeshRenderer>() != null)
+        {
+            //takenObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+            //takenObject.GetComponent<MeshRenderer>().receiveShadows = true;
+        }
+        takenObject.transform.parent = null;
+        takenObject.gameObject.layer = 0;
+        foreach (Transform child in takenObject.GetComponentsInChildren<Transform>())
+        {
+            takenObject.GetComponent<Rigidbody>().isKinematic = false;
+            takenObject.GetComponent<Collider>().isTrigger = false;
+            child.gameObject.layer = 0;
+        }
+
+        takenObject = null;
     }
 }
