@@ -48,6 +48,13 @@
      <Compile Include="Assets\Superlemonal\Scripts\Superliminal.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\PerspectiveManager.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\noobject.cs" />
+     <Compile Include="Assets\Extensions\unitycoder_com\DemoRunTime\Scripts\NormalMapMakerRuntimeDemo.cs" />
+     <Compile Include="Assets\Extensions\unitycoder_com\NormalMapMaker\Scripts\NormalMapTools.cs" />
+     <Compile Include="Assets\Extensions\unitycoder_com\Demo_NormalMapMaker\Scripts\DemoRotator.cs" />
+     <None Include="Assets\Extensions\unitycoder_com\Demo_NormalMapMaker\Shaders\BumpedSpecularFixNormal.shader" />
+     <None Include="Assets\Extensions\unitycoder_com\Demo_NormalMapMaker\Shaders\BumpedSpecularSeparate.shader" />
+     <None Include="Assets\Extensions\unitycoder_com\Demo_NormalMapMaker\Shaders\BumpedSpecularSeparateFixNormal.shader" />
+     <None Include="Assets\Extensions\unitycoder_com\Demo_NormalMapMaker\Shaders\BumpedDiffuseFixNormal.shader" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

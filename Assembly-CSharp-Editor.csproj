@@ -36,7 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\URPExample\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
+     <Compile Include="Assets\Extensions\unitycoder_com\NormalMapMaker\Editor\NormalMapMaker.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -653,6 +653,10 @@
       <Project>{50701a5d-3cce-c3ac-7535-13e2bbb837d9}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
+    <ProjectReference Include="ToolbarExtender.Editor.csproj">
+      <Project>{d2541324-7b4a-e227-d587-3b67e688e980}</Project>
+      <Name>ToolbarExtender.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
       <Project>{1ca77f28-28f5-4ce6-d590-c655b5b7c331}</Project>
       <Name>Unity.VSCode.Editor</Name>
@@ -772,10 +776,6 @@
     <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
       <Project>{f3089458-3f62-33ec-5735-82a098dd1dae}</Project>
       <Name>Unity.RenderPipelines.Core.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="ToolbarExtender.Editor.csproj">
-      <Project>{d2541324-7b4a-e227-d587-3b67e688e980}</Project>
-      <Name>ToolbarExtender.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

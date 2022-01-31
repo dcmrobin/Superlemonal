@@ -48,6 +48,7 @@
      <Compile Include="Assets\Plugins\Standard Assets\Utility\PlatformSpecificContent.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+     <Compile Include="Assets\Plugins\Portal\PortalTeleporter.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\Cameras\Scripts\ProtectCameraFromWallClip.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\SampleScenes\Scripts\LevelReset.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
@@ -75,6 +76,7 @@
      <Compile Include="Assets\Plugins\URPExample\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\Utility\CurveControlledBob.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\Characters\FirstPersonCharacter\Scripts\MouseLook.cs" />
+     <Compile Include="Assets\Plugins\Portal\PortalCamera.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\ParticleSystems\Scripts\ParticleSystemMultiplier.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
      <Compile Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Scripts\WheelsRotation.cs" />
@@ -135,6 +137,7 @@
      <Compile Include="Assets\Plugins\Standard Assets\ParticleSystems\Scripts\WaterHoseParticles.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\Vehicles\Car\Scripts\CarUserControl.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
+     <Compile Include="Assets\Plugins\Portal\PortalTextureSetup.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\Utility\EventSystemChecker.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\Utility\ActivateTrigger.cs" />
@@ -146,9 +149,6 @@
      <Compile Include="Assets\Plugins\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
      <Compile Include="Assets\Plugins\List\ListTester.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\ParticleSystems\Scripts\Hose.cs" />
-     <Compile Include="Assets\Plugins\Portal\PortalTextureSetup.cs" />
-     <Compile Include="Assets\Plugins\Portal\PortalTeleporter.cs" />
-     <Compile Include="Assets\Plugins\Portal\PortalCamera.cs" />
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
      <None Include="Assets\Plugins\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -842,6 +842,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="ToolbarExtender.Editor.csproj">
+      <Project>{d2541324-7b4a-e227-d587-3b67e688e980}</Project>
+      <Name>ToolbarExtender.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
       <Project>{1ca77f28-28f5-4ce6-d590-c655b5b7c331}</Project>
       <Name>Unity.VSCode.Editor</Name>
@@ -961,10 +965,6 @@
     <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
       <Project>{f3089458-3f62-33ec-5735-82a098dd1dae}</Project>
       <Name>Unity.RenderPipelines.Core.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="ToolbarExtender.Editor.csproj">
-      <Project>{d2541324-7b4a-e227-d587-3b67e688e980}</Project>
-      <Name>ToolbarExtender.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

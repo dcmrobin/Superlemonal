@@ -6,6 +6,7 @@
 using UnityEngine;
 
 public class PerspectiveManager : MonoBehaviour {
+    public bool isGrabbing = false;
     bool toneAble = false;
     public float mass = 10000000000;
 
@@ -82,6 +83,7 @@ public class PerspectiveManager : MonoBehaviour {
         {
             if (hit.transform.tag == "Getable")
             {
+                isGrabbing = true;
                 pop.Play();
                 takenObject = hit.transform.gameObject;
 
@@ -184,6 +186,7 @@ public class PerspectiveManager : MonoBehaviour {
 
     public void releaseObject()
     {
+        isGrabbing = false;
         toneAble = true;
         pop2.Play();
         toneAble = false;
