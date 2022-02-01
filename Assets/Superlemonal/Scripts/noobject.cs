@@ -24,7 +24,7 @@ public class noobject : MonoBehaviour
         {
             gameObject.GetComponent<Collider>().isTrigger = true;
             animator.SetBool("planeBool", false);
-            animator.SetBool("bugfixerbool", false);
+            animator.SetBool("bugfixerbool", true);
         }
     }
 }
