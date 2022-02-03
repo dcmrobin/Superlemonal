@@ -41,7 +41,6 @@
      <Compile Include="Assets\Superlemonal\Scripts\piconwallmanager.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\changeimage.cs" />
      <Compile Include="Assets\Autosave.cs" />
-     <Compile Include="Assets\Superlemonal\Scripts\Weight.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\SetVolume.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\teleport.cs" />
@@ -55,6 +54,7 @@
      <None Include="Assets\Extensions\unitycoder_com\Demo_NormalMapMaker\Shaders\BumpedSpecularSeparate.shader" />
      <None Include="Assets\Extensions\unitycoder_com\Demo_NormalMapMaker\Shaders\BumpedSpecularSeparateFixNormal.shader" />
      <None Include="Assets\Extensions\unitycoder_com\Demo_NormalMapMaker\Shaders\BumpedDiffuseFixNormal.shader" />
+     <None Include="Assets\Superlemonal\ScreenCutoutShader.shader" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

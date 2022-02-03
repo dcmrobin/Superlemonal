@@ -29,7 +29,6 @@ public class button : MonoBehaviour
             //Debug.Log("ouch");
             buttonAnimationController.SetBool("bool", true);
             doorAnimationController.SetBool("doorBool", true);
-            
             buttonAnimationController.SetBool("bugfixerbool", false);
             doorAnimationController.SetBool("bugfixerbool", false);
             mats[1] = originalRed;
@@ -41,7 +40,6 @@ public class button : MonoBehaviour
         {
             buttonAnimationController.SetBool("bool", true);
             doorAnimationController.SetBool("doorBool", true);
-            
             buttonAnimationController.SetBool("bugfixerbool", false);
             doorAnimationController.SetBool("bugfixerbool", false);
             mats[1] = originalRed;
@@ -55,7 +53,6 @@ public class button : MonoBehaviour
     {
         buttonAnimationController.SetBool("bool", false);
         doorAnimationController.SetBool("doorBool", false);
-
         buttonAnimationController.SetBool("bugfixerbool", true);
         doorAnimationController.SetBool("bugfixerbool", true);
         mats[1] = redLight;

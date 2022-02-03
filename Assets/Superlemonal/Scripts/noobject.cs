@@ -5,7 +5,9 @@ using UnityEngine;
 public class noobject : MonoBehaviour
 {
     PerspectiveManager perspectiveManager;
+    public AudioSource wobble;
     public Animator animator;
+    bool toneAble = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,22 @@ public class noobject : MonoBehaviour
             gameObject.GetComponent<Collider>().isTrigger = true;
             animator.SetBool("planeBool", false);
             animator.SetBool("bugfixerbool", true);
+        }
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.CompareTag("Player"))
+        {
+            if (!perspectiveManager.isGrabbing)
+            {
+                toneAble = true;
+                if (toneAble)
+                {
+                    wobble.Play();
+                    toneAble = false;
+                }
+            }
         }
     }
 }
