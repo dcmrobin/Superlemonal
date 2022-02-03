@@ -14,19 +14,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: f537d254a8e8acd49b01108ba2711ce5, type: 3}
---- !u!114 &4394419276258977341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2815163460170549593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c95c7e670564c3e42bff4333053a8de8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 7895496647608640825}
 --- !u!65 &2642761127392738711
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59,6 +46,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4394419276258977341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2815163460170549593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c95c7e670564c3e42bff4333053a8de8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 7895496647608640825}
 --- !u!1 &6706490033258921320
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,7 +273,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4b219080dc345db4888dd08a74645aec,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4b219080dc345db4888dd08a74645aec,
         type: 3}
@@ -283,7 +283,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4b219080dc345db4888dd08a74645aec,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -9.844688e-11
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4b219080dc345db4888dd08a74645aec,
         type: 3}
@@ -293,7 +293,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4b219080dc345db4888dd08a74645aec,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.0001390886
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4b219080dc345db4888dd08a74645aec,
         type: 3}
