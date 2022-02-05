@@ -8,6 +8,7 @@ TagManager:
   - Getable
   - PictureOnTheWall
   - Getableportal
+  - agreementpaper
   layers:
   - Default
   - TransparentFX

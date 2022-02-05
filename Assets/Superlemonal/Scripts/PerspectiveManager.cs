@@ -6,9 +6,14 @@
 using UnityEngine;
 
 public class PerspectiveManager : MonoBehaviour {
+    public GameObject gameobjecttodeactivate;
+    public GameObject signatureobject;
+    public AudioSource signaturesound;
     public bool isGrabbing = false;
     bool toneAble = false;
-    public float mass = 10000000000;
+    bool tone2able = false;
+    bool signatureAble = true;
+    public float objectmass = 10000000000;
 
     public Material yellowToon;
     public Material blueToon;
@@ -96,7 +101,7 @@ public class PerspectiveManager : MonoBehaviour {
                 if (takenObject.GetComponent<Rigidbody>() == null)
                 {
                     takenObject.AddComponent<Rigidbody>();
-                    takenObject.GetComponent<Rigidbody>().mass = mass;
+                    takenObject.GetComponent<Rigidbody>().mass = objectmass;
                 }
                 takenObject.GetComponent<Rigidbody>().isKinematic = true;
 
@@ -180,6 +185,26 @@ public class PerspectiveManager : MonoBehaviour {
             if (takenObject != null)
             {
                 releaseObject();
+            }
+        }
+
+
+        if ((Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0)) && isRayTouchingSomething)
+        {
+            if (hit.transform.tag == "agreementpaper")
+            {
+                if (signatureAble)
+                {
+                    gameobjecttodeactivate.SetActive(false);
+                    signatureobject.SetActive(true);
+                    tone2able = true;
+                    if (tone2able)
+                    {
+                        signaturesound.Play();
+                        tone2able = false;
+                    }
+                    signatureAble = false;
+                }
             }
         }
     }
