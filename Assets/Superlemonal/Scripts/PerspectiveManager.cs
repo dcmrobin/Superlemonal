@@ -11,7 +11,7 @@ public class PerspectiveManager : MonoBehaviour {
     public AudioSource signaturesound;
     public bool isGrabbing = false;
     bool toneAble = false;
-    bool tone2able = false;
+    //bool tone2able = false;
     bool signatureAble = true;
     public float objectmass = 10000000000;
 
@@ -197,12 +197,12 @@ public class PerspectiveManager : MonoBehaviour {
                 {
                     gameobjecttodeactivate.SetActive(false);
                     signatureobject.SetActive(true);
-                    tone2able = true;
-                    if (tone2able)
-                    {
-                        signaturesound.Play();
-                        tone2able = false;
-                    }
+                    //tone2able = true;
+                    //if (tone2able)
+                    //{
+                    signaturesound.Play();
+                        //tone2able = false;
+                    //}
                     signatureAble = false;
                 }
             }

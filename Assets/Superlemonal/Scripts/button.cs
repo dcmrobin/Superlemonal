@@ -12,6 +12,8 @@ public class button : MonoBehaviour
     public Material redLight;
     public Material originalGreen;
     public Material originalRed;
+    public AudioSource buttonSound;
+    public AudioSource doorSound;
 
     //[SerializeField] private string buttonPress = "ButtonPress";
 
@@ -31,6 +33,8 @@ public class button : MonoBehaviour
             doorAnimationController.SetBool("doorBool", true);
             buttonAnimationController.SetBool("bugfixerbool", false);
             doorAnimationController.SetBool("bugfixerbool", false);
+            buttonSound.Play();
+            doorSound.Play();
             mats[1] = originalRed;
             sign.GetComponent<MeshRenderer>().materials = mats;
             mats[2] = greenLight;
@@ -42,6 +46,8 @@ public class button : MonoBehaviour
             doorAnimationController.SetBool("doorBool", true);
             buttonAnimationController.SetBool("bugfixerbool", false);
             doorAnimationController.SetBool("bugfixerbool", false);
+            buttonSound.Play();
+            doorSound.Play();
             mats[1] = originalRed;
             sign.GetComponent<MeshRenderer>().materials = mats;
             mats[2] = greenLight;
