@@ -88,6 +88,7 @@ public class PerspectiveManager : MonoBehaviour {
         {
             if (hit.transform.tag == "Getable")
             {
+                hit.transform.gameObject.GetComponent<Outline>().enabled = true;
                 isGrabbing = true;
                 pop.Play();
                 takenObject = hit.transform.gameObject;
@@ -217,6 +218,7 @@ public class PerspectiveManager : MonoBehaviour {
         toneAble = false;
 
         takenObject.GetComponent<Rigidbody>().isKinematic = false;
+        takenObject.GetComponent<Outline>().enabled = false;
 
         foreach (Collider col in takenObject.GetComponents<Collider>())
         {

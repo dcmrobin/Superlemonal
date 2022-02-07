@@ -105,6 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1442204291322015072}
   - component: {fileID: 3555381665755541744}
+  - component: {fileID: -8643907548341558599}
   m_Layer: 0
   m_Name: ramp
   m_TagString: Getable
@@ -141,6 +142,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.020545, y: 1.276636, z: 2.0255985}
   m_Center: {x: 0.50589216, y: 0.0040754676, z: 0.0021458524}
+--- !u!114 &-8643907548341558599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2254172035649026010}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &4639023864328508993
 GameObject:
   m_ObjectHideFlags: 0
