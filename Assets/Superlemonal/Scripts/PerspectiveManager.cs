@@ -192,6 +192,19 @@ public class PerspectiveManager : MonoBehaviour {
             }
         }
 
+        if (Physics.Raycast(ray, out hit, rayMaxRange, layerMask))
+        {
+            if (hit.transform.tag == "agreementpaper")
+            {
+                if (signatureAble)
+                {
+                    pointer.GetComponent<SpriteRenderer>().sprite = handaboutgrabby;
+                } else
+                {
+                    pointer.GetComponent<SpriteRenderer>().sprite = handnograbby;
+                }
+            }
+        }
 
         if ((Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0)) && isRayTouchingSomething)
         {
