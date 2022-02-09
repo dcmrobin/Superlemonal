@@ -4,14 +4,12 @@
 // GitHub: https://github.com/danielcmcg/Forced-Perspective-Illusion-Mechanic-for-Unity
 
 using UnityEngine;
-using FMODUnity;
 
 public class PerspectiveManager : MonoBehaviour {
     public GameObject gameobjecttodeactivate;
     public GameObject signatureobject;
-    public AudioSource signaturesound;
     public bool isGrabbing = false;
-    bool toneAble = false;
+    //bool toneAble = false;
     //bool tone2able = false;
     bool signatureAble = true;
     public float objectmass = 10000000000;
@@ -23,10 +21,6 @@ public class PerspectiveManager : MonoBehaviour {
     public Sprite handnograbby;
     public Sprite handaboutgrabby;
     public Sprite handgrabby;
-
-    public AudioSource pop;
-    public AudioSource pop2;
-    
     private Camera mainCamera;
     private Transform targetForTakenObjects;
     private GameObject pointer;
@@ -98,7 +92,7 @@ public class PerspectiveManager : MonoBehaviour {
             {
                 hit.transform.gameObject.GetComponent<Outline>().enabled = true;
                 isGrabbing = true;
-                FMODUnity.RuntimeManager.PlayOneShot("event:/pop1");
+                //FMODUnity.RuntimeManager.PlayOneShot("event:/pop1");
                 takenObject = hit.transform.gameObject;
 
                 distanceMultiplier = Vector3.Distance(mainCamera.transform.position, takenObject.transform.position);
@@ -210,9 +204,10 @@ public class PerspectiveManager : MonoBehaviour {
                     //tone2able = true;
                     //if (tone2able)
                     //{
-                    signaturesound.Play();
+                    //signaturesound.Play();
                         //tone2able = false;
                     //}
+                    //FMODUnity.RuntimeManager.PlayOneShot("event:/sig");
                     signatureAble = false;
                 }
             }
@@ -222,9 +217,10 @@ public class PerspectiveManager : MonoBehaviour {
     public void releaseObject()
     {
         isGrabbing = false;
-        toneAble = true;
-        FMODUnity.RuntimeManager.PlayOneShot("event:/pop2");
-        toneAble = false;
+
+        //toneAble = true;
+        //FMODUnity.RuntimeManager.PlayOneShot("event:/pop2");
+        //toneAble = false;
 
         takenObject.GetComponent<Rigidbody>().isKinematic = false;
         takenObject.GetComponent<Outline>().enabled = false;

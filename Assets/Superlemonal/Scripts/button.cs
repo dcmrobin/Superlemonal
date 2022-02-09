@@ -36,8 +36,10 @@ public class button : MonoBehaviour
             doorAnimationController.SetBool("bugfixerbool", false);
             //buttonSound.Play();
             //doorSound.Play();
-            FMODUnity.RuntimeManager.PlayOneShot("event:/button");
-            FMODUnity.RuntimeManager.PlayOneShot("event:/door");
+
+            //FMODUnity.RuntimeManager.PlayOneShot("event:/button");
+            //FMODUnity.RuntimeManager.PlayOneShot("event:/door");
+
             mats[1] = originalRed;
             sign.GetComponent<MeshRenderer>().materials = mats;
             mats[2] = greenLight;
@@ -51,8 +53,10 @@ public class button : MonoBehaviour
             doorAnimationController.SetBool("bugfixerbool", false);
             //buttonSound.Play();
             //doorSound.Play();
-            FMODUnity.RuntimeManager.PlayOneShot("event:/button");
-            FMODUnity.RuntimeManager.PlayOneShot("event:/door");
+
+            //FMODUnity.RuntimeManager.PlayOneShot("event:/button");
+            //FMODUnity.RuntimeManager.PlayOneShot("event:/door");
+
             mats[1] = originalRed;
             sign.GetComponent<MeshRenderer>().materials = mats;
             mats[2] = greenLight;
@@ -66,8 +70,10 @@ public class button : MonoBehaviour
         doorAnimationController.SetBool("doorBool", false);
         buttonAnimationController.SetBool("bugfixerbool", true);
         doorAnimationController.SetBool("bugfixerbool", true);
-        FMODUnity.RuntimeManager.PlayOneShot("event:/button");
-        FMODUnity.RuntimeManager.PlayOneShot("event:/door");
+
+        //FMODUnity.RuntimeManager.PlayOneShot("event:/button");
+        //FMODUnity.RuntimeManager.PlayOneShot("event:/door");
+
         mats[1] = redLight;
         sign.GetComponent<MeshRenderer>().materials = mats;
         mats[2] = originalGreen;
