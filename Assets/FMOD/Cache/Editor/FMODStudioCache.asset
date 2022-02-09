@@ -81,6 +81,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 208
+--- !u!114 &-1874696529026443982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sig
+  m_EditorClassIdentifier: 
+  Path: event:/sig
+  Guid:
+    Data1: 2107637788
+    Data2: 1228503752
+    Data3: -1119484030
+    Data4: -1094987885
+  Banks:
+  - {fileID: 4102176314531915253}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 830
 --- !u!114 &-1380849503210386043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,12 +155,13 @@ MonoBehaviour:
   - {fileID: -3079939935877795408}
   - {fileID: -4906754409307739246}
   - {fileID: -7117605367737338383}
+  - {fileID: -1874696529026443982}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4102176314531915253}
   StringsBanks:
   - {fileID: 6810397259200617279}
-  cacheTime: 637799354266113159
+  cacheTime: 637799992960947891
   cacheVersion: 10
 --- !u!114 &4102176314531915253
 MonoBehaviour:
@@ -150,10 +178,10 @@ MonoBehaviour:
   Path: ../../FMOD/Superlemonal/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637799354266053180
+  lastModified: 637799992960907889
   FileSizes:
   - Name: Desktop
-    Value: 19744
+    Value: 37760
   Exists: 1
 --- !u!114 &6810397259200617279
 MonoBehaviour:
@@ -170,8 +198,8 @@ MonoBehaviour:
   Path: ../../FMOD/Superlemonal/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637799354266113159
+  lastModified: 637799992960947891
   FileSizes:
   - Name: Desktop
-    Value: 882
+    Value: 916
   Exists: 1

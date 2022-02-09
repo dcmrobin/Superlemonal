@@ -4,6 +4,7 @@
 // GitHub: https://github.com/danielcmcg/Forced-Perspective-Illusion-Mechanic-for-Unity
 
 using UnityEngine;
+using FMODUnity;
 
 public class PerspectiveManager : MonoBehaviour {
     public GameObject gameobjecttodeactivate;
@@ -15,9 +16,13 @@ public class PerspectiveManager : MonoBehaviour {
     bool signatureAble = true;
     public float objectmass = 10000000000;
 
-    public Material yellowToon;
-    public Material blueToon;
-    public Material redToon;
+    //public Material yellowToon;
+    //public Material blueToon;
+    //public Material redToon;
+    public SpriteRenderer handspriterenderer;
+    public Sprite handnograbby;
+    public Sprite handaboutgrabby;
+    public Sprite handgrabby;
 
     public AudioSource pop;
     public AudioSource pop2;
@@ -64,11 +69,13 @@ public class PerspectiveManager : MonoBehaviour {
         {
             if (hit.transform.tag == "Getable" || hit.transform.tag == "PictureOnTheWall")
             {
-                pointer.GetComponent<MeshRenderer>().material = blueToon;
+                //pointer.GetComponent<MeshRenderer>().material = blueToon;
+                pointer.GetComponent<SpriteRenderer>().sprite = handaboutgrabby;
             }
             else
             {
-                pointer.GetComponent<MeshRenderer>().material = yellowToon;
+                //pointer.GetComponent<MeshRenderer>().material = yellowToon;
+                pointer.GetComponent<SpriteRenderer>().sprite = handnograbby;
             }
         }
 
@@ -76,7 +83,8 @@ public class PerspectiveManager : MonoBehaviour {
 
         if (takenObject != null)
         {
-            pointer.GetComponent<MeshRenderer>().material = redToon;
+            //pointer.GetComponent<MeshRenderer>().material = redToon;
+            pointer.GetComponent<SpriteRenderer>().sprite = handgrabby;
             //pop.Play();
         }
         else
@@ -90,7 +98,7 @@ public class PerspectiveManager : MonoBehaviour {
             {
                 hit.transform.gameObject.GetComponent<Outline>().enabled = true;
                 isGrabbing = true;
-                FMODUnity.RuntimeManager.PlayOneShot("pop1");
+                FMODUnity.RuntimeManager.PlayOneShot("event:/pop1");
                 takenObject = hit.transform.gameObject;
 
                 distanceMultiplier = Vector3.Distance(mainCamera.transform.position, takenObject.transform.position);
@@ -214,7 +222,7 @@ public class PerspectiveManager : MonoBehaviour {
     {
         isGrabbing = false;
         toneAble = true;
-        FMODUnity.RuntimeManager.PlayOneShot("pop2");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/pop2");
         toneAble = false;
 
         takenObject.GetComponent<Rigidbody>().isKinematic = false;

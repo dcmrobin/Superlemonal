@@ -53,9 +53,10 @@ MonoBehaviour:
   signaturesound: {fileID: 0}
   isGrabbing: 0
   objectmass: 1e+10
-  yellowToon: {fileID: 2100000, guid: e846f906451107948a0caf55eed7bbd4, type: 2}
-  blueToon: {fileID: 2100000, guid: 33157068e3890b84193c7fe2e241c0cd, type: 2}
-  redToon: {fileID: 2100000, guid: 6ad8cc1a14af7b0448196325cfe4f803, type: 2}
+  handspriterenderer: {fileID: 0}
+  handnograbby: {fileID: 21300000, guid: 2e37062015501244d8d9dee256fdd34e, type: 3}
+  handaboutgrabby: {fileID: 21300000, guid: fe2bce6f57323db41a7bb2f8c6286d68, type: 3}
+  handgrabby: {fileID: 21300000, guid: 83af81757b5f1cf46ae858720a5d375b, type: 3}
   pop: {fileID: 0}
   pop2: {fileID: 0}
 --- !u!114 &-1593168580234316735
