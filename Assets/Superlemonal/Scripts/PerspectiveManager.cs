@@ -111,6 +111,7 @@ public class PerspectiveManager : MonoBehaviour {
                 {
                     takenObject.AddComponent<Rigidbody>();
                     takenObject.GetComponent<Rigidbody>().mass = objectmass;
+                    takenObject.GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.Continuous;
                 }
                 takenObject.GetComponent<Rigidbody>().isKinematic = true;
 
