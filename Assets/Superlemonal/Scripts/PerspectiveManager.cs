@@ -90,7 +90,7 @@ public class PerspectiveManager : MonoBehaviour {
             {
                 hit.transform.gameObject.GetComponent<Outline>().enabled = true;
                 isGrabbing = true;
-                pop.Play();
+                FMODUnity.RuntimeManager.PlayOneShot("pop1");
                 takenObject = hit.transform.gameObject;
 
                 distanceMultiplier = Vector3.Distance(mainCamera.transform.position, takenObject.transform.position);
@@ -214,7 +214,7 @@ public class PerspectiveManager : MonoBehaviour {
     {
         isGrabbing = false;
         toneAble = true;
-        pop2.Play();
+        FMODUnity.RuntimeManager.PlayOneShot("pop2");
         toneAble = false;
 
         takenObject.GetComponent<Rigidbody>().isKinematic = false;

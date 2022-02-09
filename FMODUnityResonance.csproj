@@ -36,9 +36,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Plugins\FMOD\addons\ResonanceAudio\Scripts\FmodResonanceAudio.cs" />
-     <Compile Include="Assets\Plugins\FMOD\addons\ResonanceAudio\Scripts\FmodResonanceAudioRoom.cs" />
-     <None Include="Assets\Plugins\FMOD\addons\ResonanceAudio\Scripts\FMODUnityResonance.asmdef" />
+     <Compile Include="Assets\FMOD\addons\ResonanceAudio\Scripts\FmodResonanceAudio.cs" />
+     <Compile Include="Assets\FMOD\addons\ResonanceAudio\Scripts\FmodResonanceAudioRoom.cs" />
+     <None Include="Assets\FMOD\addons\ResonanceAudio\Scripts\FMODUnityResonance.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -267,6 +267,9 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="unityplastic">
+        <HintPath>C:/Users/matsk/Documents/unity projects/superlemonal/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+    </Reference>
     <Reference Include="log4netPlastic">
         <HintPath>C:/Users/matsk/Documents/unity projects/superlemonal/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
     </Reference>
@@ -278,9 +281,6 @@
     </Reference>
     <Reference Include="ICSharpCode.NRefactory">
         <HintPath>C:/Users/matsk/Documents/unity projects/superlemonal/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
-    </Reference>
-    <Reference Include="unityplastic">
-        <HintPath>C:/Users/matsk/Documents/unity projects/superlemonal/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

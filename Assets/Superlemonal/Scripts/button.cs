@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using FMODUnity;
 
 public class button : MonoBehaviour
 {
@@ -12,8 +13,8 @@ public class button : MonoBehaviour
     public Material redLight;
     public Material originalGreen;
     public Material originalRed;
-    public AudioSource buttonSound;
-    public AudioSource doorSound;
+    //public AudioSource buttonSound;
+    //public AudioSource doorSound;
 
     //[SerializeField] private string buttonPress = "ButtonPress";
 
@@ -33,8 +34,10 @@ public class button : MonoBehaviour
             doorAnimationController.SetBool("doorBool", true);
             buttonAnimationController.SetBool("bugfixerbool", false);
             doorAnimationController.SetBool("bugfixerbool", false);
-            buttonSound.Play();
-            doorSound.Play();
+            //buttonSound.Play();
+            //doorSound.Play();
+            FMODUnity.RuntimeManager.PlayOneShot("event:/button");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/door");
             mats[1] = originalRed;
             sign.GetComponent<MeshRenderer>().materials = mats;
             mats[2] = greenLight;
@@ -46,8 +49,10 @@ public class button : MonoBehaviour
             doorAnimationController.SetBool("doorBool", true);
             buttonAnimationController.SetBool("bugfixerbool", false);
             doorAnimationController.SetBool("bugfixerbool", false);
-            buttonSound.Play();
-            doorSound.Play();
+            //buttonSound.Play();
+            //doorSound.Play();
+            FMODUnity.RuntimeManager.PlayOneShot("button");
+            FMODUnity.RuntimeManager.PlayOneShot("door");
             mats[1] = originalRed;
             sign.GetComponent<MeshRenderer>().materials = mats;
             mats[2] = greenLight;
@@ -61,6 +66,8 @@ public class button : MonoBehaviour
         doorAnimationController.SetBool("doorBool", false);
         buttonAnimationController.SetBool("bugfixerbool", true);
         doorAnimationController.SetBool("bugfixerbool", true);
+        FMODUnity.RuntimeManager.PlayOneShot("button");
+        FMODUnity.RuntimeManager.PlayOneShot("door");
         mats[1] = redLight;
         sign.GetComponent<MeshRenderer>().materials = mats;
         mats[2] = originalGreen;
