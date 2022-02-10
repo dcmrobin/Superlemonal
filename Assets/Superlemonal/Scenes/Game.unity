@@ -8084,7 +8084,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 0}
-    - {fileID: -5601752463494501341, guid: 390be3b8108f1844d845bef1ba031e02, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 390be3b8108f1844d845bef1ba031e02, type: 3}
 --- !u!1001 &606910416
 PrefabInstance:
@@ -14291,24 +14291,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5113406991100309939, guid: 390be3b8108f1844d845bef1ba031e02,
-        type: 3}
-      propertyPath: m_RunSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5113406991100309939, guid: 390be3b8108f1844d845bef1ba031e02,
-        type: 3}
-      propertyPath: m_JumpSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5113406991100309939, guid: 390be3b8108f1844d845bef1ba031e02,
-        type: 3}
-      propertyPath: m_UseFovKick
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
-    - {fileID: -5601752463494501341, guid: 390be3b8108f1844d845bef1ba031e02, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 390be3b8108f1844d845bef1ba031e02, type: 3}
 --- !u!1 &1129503273
 GameObject:

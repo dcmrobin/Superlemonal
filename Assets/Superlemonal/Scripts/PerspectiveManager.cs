@@ -86,13 +86,13 @@ public class PerspectiveManager : MonoBehaviour {
             targetForTakenObjects.position = hit.point;
         }
 
-        if ((Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0)) && isRayTouchingSomething)
+        if ((Input.GetMouseButtonDown(0)) && isRayTouchingSomething)
         {
             if (hit.transform.tag == "Getable")
             {
                 hit.transform.gameObject.GetComponent<Outline>().enabled = true;
                 isGrabbing = true;
-                //FMODUnity.RuntimeManager.PlayOneShot("event:/pop1");
+                FMODUnity.RuntimeManager.PlayOneShot("event:/pop1");
                 takenObject = hit.transform.gameObject;
 
                 distanceMultiplier = Vector3.Distance(mainCamera.transform.position, takenObject.transform.position);
@@ -142,7 +142,7 @@ public class PerspectiveManager : MonoBehaviour {
             }
         }
 
-        if (Input.GetKey(KeyCode.E) || Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0))
         {
             if (takenObject != null)
             {
@@ -184,7 +184,7 @@ public class PerspectiveManager : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.E) || Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0))
         {
             if (takenObject != null)
             {
@@ -206,7 +206,7 @@ public class PerspectiveManager : MonoBehaviour {
             }
         }
 
-        if ((Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0)) && isRayTouchingSomething)
+        if ((Input.GetMouseButtonDown(0)) && isRayTouchingSomething)
         {
             if (hit.transform.tag == "agreementpaper")
             {
@@ -220,7 +220,7 @@ public class PerspectiveManager : MonoBehaviour {
                     //signaturesound.Play();
                         //tone2able = false;
                     //}
-                    //FMODUnity.RuntimeManager.PlayOneShot("event:/sig");
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/sig");
                     signatureAble = false;
                 }
             }
@@ -232,7 +232,7 @@ public class PerspectiveManager : MonoBehaviour {
         isGrabbing = false;
 
         //toneAble = true;
-        //FMODUnity.RuntimeManager.PlayOneShot("event:/pop2");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/pop2");
         //toneAble = false;
 
         takenObject.GetComponent<Rigidbody>().isKinematic = false;

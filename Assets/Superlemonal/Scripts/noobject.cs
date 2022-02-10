@@ -36,12 +36,7 @@ public class noobject : MonoBehaviour
         {
             if (!perspectiveManager.isGrabbing)
             {
-                toneAble = true;
-                if (toneAble)
-                {
-                    wobble.Play();
-                    toneAble = false;
-                }
+                FMODUnity.RuntimeManager.PlayOneShot("event:/wobble");
             }
         }
     }
