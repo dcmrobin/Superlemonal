@@ -37,7 +37,6 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\FMOD\src\StudioListener.cs" />
-     <Compile Include="Assets\FMOD\src\StudioEventEmitter.cs" />
      <Compile Include="Assets\FMOD\src\fmod.cs" />
      <Compile Include="Assets\FMOD\src\fmod_studio.cs" />
      <Compile Include="Assets\FMOD\platforms\android\src\PlatformAndroid.cs" />
@@ -49,6 +48,7 @@
      <Compile Include="Assets\FMOD\platforms\win\src\PlatformWindows.cs" />
      <Compile Include="Assets\FMOD\platforms\ios\src\PlatformIOS.cs" />
      <Compile Include="Assets\FMOD\src\RuntimeManager.cs" />
+     <Compile Include="Assets\FMOD\src\StudioEventEmitter.cs" />
      <Compile Include="Assets\FMOD\src\EventHandler.cs" />
      <Compile Include="Assets\FMOD\src\AutomatableSlots.cs" />
      <Compile Include="Assets\FMOD\src\EventRefAttribute.cs" />
