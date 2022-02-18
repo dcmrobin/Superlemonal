@@ -38,15 +38,19 @@
   <ItemGroup>
      <Compile Include="Assets\Superlemonal\Scripts\cutpiconwallmanager.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\button.cs" />
+     <Compile Include="Assets\Portal\PortalTeleporter.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\piconwallmanager.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\changeimage.cs" />
+     <Compile Include="Assets\Portal\PortalCamera.cs" />
      <Compile Include="Assets\Autosave.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\SetVolume.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\teleport.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\Superliminal.cs" />
+     <Compile Include="Assets\Portal\PortalTextureSetup.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\noobject.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\PerspectiveManager.cs" />
+     <None Include="Assets\Portal\ScreenCutoutShader.shader" />
      <None Include="Assets\Superlemonal\ScreenCutoutShader.shader" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -672,6 +676,10 @@
       <Project>{9382b542-5e9d-adc2-5f34-0c35266765a5}</Project>
       <Name>Unity.ProBuilder</Name>
     </ProjectReference>
+    <ProjectReference Include="FMODUnityResonanceEditor.csproj">
+      <Project>{94afe203-2f74-c6a5-4f0b-b00074db0f0b}</Project>
+      <Name>FMODUnityResonanceEditor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.ProBuilder.Editor.csproj">
       <Project>{62b690ef-24b5-e0d2-d374-86d738ff7b45}</Project>
       <Name>Unity.ProBuilder.Editor</Name>
@@ -732,37 +740,33 @@
       <Project>{c8408362-08aa-36b2-5df2-111965d8f4ae}</Project>
       <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
-      <Project>{02b30ec0-a8e5-faaf-c189-25e1703db390}</Project>
-      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
+    <ProjectReference Include="FMODUnity.csproj">
+      <Project>{e00a784f-7885-d3fc-66fe-5edd9a061bda}</Project>
+      <Name>FMODUnity</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Editor.csproj">
       <Project>{ec664512-4568-e500-573a-c4d13723c071}</Project>
       <Name>Unity.Timeline.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
+      <Project>{02b30ec0-a8e5-faaf-c189-25e1703db390}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.Editor.csproj">
       <Project>{305ccc29-11ab-1b1d-0d25-2286d4f2fb51}</Project>
       <Name>Unity.Mathematics.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
-      <Project>{f3089458-3f62-33ec-5735-82a098dd1dae}</Project>
-      <Name>Unity.RenderPipelines.Core.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="FMODUnity.csproj">
-      <Project>{e00a784f-7885-d3fc-66fe-5edd9a061bda}</Project>
-      <Name>FMODUnity</Name>
+    <ProjectReference Include="FMODUnityEditor.csproj">
+      <Project>{53dfc932-bdba-f8df-5f40-05abeb5fcd64}</Project>
+      <Name>FMODUnityEditor</Name>
     </ProjectReference>
     <ProjectReference Include="FMODUnityResonance.csproj">
       <Project>{3218bc7f-687a-de7e-e8c5-bec42b9ea60d}</Project>
       <Name>FMODUnityResonance</Name>
     </ProjectReference>
-    <ProjectReference Include="FMODUnityResonanceEditor.csproj">
-      <Project>{94afe203-2f74-c6a5-4f0b-b00074db0f0b}</Project>
-      <Name>FMODUnityResonanceEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="FMODUnityEditor.csproj">
-      <Project>{53dfc932-bdba-f8df-5f40-05abeb5fcd64}</Project>
-      <Name>FMODUnityEditor</Name>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
+      <Project>{f3089458-3f62-33ec-5735-82a098dd1dae}</Project>
+      <Name>Unity.RenderPipelines.Core.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
