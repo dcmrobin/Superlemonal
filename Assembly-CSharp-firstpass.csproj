@@ -41,7 +41,6 @@
      <Compile Include="Assets\Plugins\Standard Assets\Vehicles\Car\Scripts\WheelEffects.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\Vehicles\Car\Scripts\CarSelfRighting.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\Vehicles\Car\Scripts\Mudguard.cs" />
-     <Compile Include="Assets\Plugins\List\ColorPointTester.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\ParticleSystems\Scripts\Explosive.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\Utility\DynamicShadowSettings.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
@@ -85,7 +84,6 @@
      <Compile Include="Assets\Plugins\Standard Assets\Cameras\Scripts\PivotBasedCameraRig.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\Utility\AutoMoveAndRotate.cs" />
      <Compile Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\Vignetting.cs" />
-     <Compile Include="Assets\Plugins\List\ColorPoint.cs" />
      <Compile Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Scripts\Rotator.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
      <Compile Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Scripts\CaptureNormals.cs" />
@@ -145,7 +143,6 @@
      <Compile Include="Assets\Plugins\Standard Assets\Cameras\Scripts\LookatTarget.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\Characters\RollerBall\Scripts\BallUserControl.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
-     <Compile Include="Assets\Plugins\List\ListTester.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\ParticleSystems\Scripts\Hose.cs" />
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
      <None Include="Assets\Plugins\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />

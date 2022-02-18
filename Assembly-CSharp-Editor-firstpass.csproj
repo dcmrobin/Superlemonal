@@ -37,11 +37,8 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Plugins\URPExample\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
-     <Compile Include="Assets\Plugins\List\Editor\ListTesterInspector.cs" />
      <Compile Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Scripts\UpgradeHelper\Editor\RebakeAllScenes.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
-     <Compile Include="Assets\Plugins\List\Editor\EditorList.cs" />
-     <Compile Include="Assets\Plugins\List\Editor\ColorPointDrawer.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
