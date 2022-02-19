@@ -9,6 +9,7 @@ TagManager:
   - PictureOnTheWall
   - Getableportal
   - agreementpaper
+  - vendingButton
   layers:
   - Default
   - TransparentFX
