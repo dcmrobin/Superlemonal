@@ -73,6 +73,7 @@ public class button : MonoBehaviour
 
     void OnTriggerExit(Collider col)
     {
+        Debug.Log("The " + col.gameObject.name + " Jut exited the collider");
         gameObjectsInCollision.RemoveAt(gameObjectsInCollision.Count - 1);
         if (gameObjectsInCollision.Count == 0)
         {
