@@ -168,6 +168,9 @@ MonoBehaviour:
     type: 3}
   originalRed: {fileID: -6629797300637803691, guid: b1638d16507bd0c4ea0cce64d2d5502d,
     type: 3}
+  gameObjectsInCollision:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &6255545534894335054
 PrefabInstance:
   m_ObjectHideFlags: 0
