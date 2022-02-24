@@ -226,12 +226,6 @@ public class PerspectiveManager : MonoBehaviour {
                         {
                             gameobjecttodeactivate.SetActive(false);
                             signatureobject.SetActive(true);
-                            //tone2able = true;
-                            //if (tone2able)
-                            //{
-                            //signaturesound.Play();
-                                //tone2able = false;
-                            //}
                             FMODUnity.RuntimeManager.PlayOneShot("event:/sig");
                             signatureAble = false;
                         }
@@ -240,7 +234,7 @@ public class PerspectiveManager : MonoBehaviour {
             }
         }
 
-        if ((Input.GetMouseButtonDown(0)) && isRayTouchingSomething)
+        if ((Input.GetMouseButtonDown(0)) && isRayTouchingSomething && Physics.Raycast(ray, out hit, rayMaxRange, layerMask))
         {
             if (hit.transform.tag == "agreementpaper")
             {
@@ -248,12 +242,6 @@ public class PerspectiveManager : MonoBehaviour {
                 {
                     gameobjecttodeactivate.SetActive(false);
                     signatureobject.SetActive(true);
-                    //tone2able = true;
-                    //if (tone2able)
-                    //{
-                    //signaturesound.Play();
-                        //tone2able = false;
-                    //}
                     FMODUnity.RuntimeManager.PlayOneShot("event:/sig");
                     signatureAble = false;
                 }
