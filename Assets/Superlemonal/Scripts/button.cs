@@ -51,29 +51,10 @@ public class button : MonoBehaviour
                 gameObjectsInCollision.Add(col.gameObject);
             }
         }
-        /*if (col.gameObject.CompareTag("Player"))
-        {
-            gameObjectsInCollision.Add(col.gameObject);
-            buttonAnimationController.SetBool("bool", true);
-            doorAnimationController.SetBool("doorBool", true);
-            buttonAnimationController.SetBool("bugfixerbool", false);
-            doorAnimationController.SetBool("bugfixerbool", false);
-            //buttonSound.Play();
-            //doorSound.Play();
-
-            FMODUnity.RuntimeManager.PlayOneShot("event:/button");
-            FMODUnity.RuntimeManager.PlayOneShot("event:/door");
-
-            mats[1] = originalRed;
-            sign.GetComponent<MeshRenderer>().materials = mats;
-            mats[2] = greenLight;
-            sign.GetComponent<MeshRenderer>().materials = mats;
-        }*/
     }
 
     void OnTriggerExit(Collider col)
     {
-        Debug.Log("The " + col.gameObject.name + " Jut exited the collider");
         gameObjectsInCollision.RemoveAt(gameObjectsInCollision.Count - 1);
         if (gameObjectsInCollision.Count == 0)
         {
