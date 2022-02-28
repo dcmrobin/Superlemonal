@@ -105,7 +105,7 @@ public class PerspectiveManager : MonoBehaviour {
         {
             if (hit.transform.tag == "Getable")
             {
-                hit.transform.gameObject.GetComponent<Outline>().enabled = true;
+                hit.transform.Find("invert").gameObject.SetActive(true);
                 isGrabbing = true;
                 FMODUnity.RuntimeManager.PlayOneShot("event:/pop1");
                 takenObject = hit.transform.gameObject;
@@ -387,7 +387,7 @@ public class PerspectiveManager : MonoBehaviour {
         //toneAble = false;
 
         takenObject.GetComponent<Rigidbody>().isKinematic = false;
-        takenObject.GetComponent<Outline>().enabled = false;
+        takenObject.transform.Find("invert").gameObject.SetActive(false);
 
         foreach (Collider col in takenObject.GetComponents<Collider>())
         {

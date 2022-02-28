@@ -55,6 +55,14 @@ public class button : MonoBehaviour
 
     void OnTriggerExit(Collider col)
     {
+        /*if (col.gameObject.CompareTag("Player"))
+        {
+            gameObjectsInCollision.RemoveAt(gameObjectsInCollision.Count - 1);
+        }
+        if (col.gameObject.CompareTag("Getable") && gameObjectsInCollision.Count > 1)
+        {
+            gameObjectsInCollision.RemoveAt(gameObjectsInCollision.Count - 1);
+        }*/
         gameObjectsInCollision.RemoveAt(gameObjectsInCollision.Count - 1);
         if (gameObjectsInCollision.Count == 0)
         {
