@@ -5,7 +5,6 @@ using UnityEngine;
 public class noobject : MonoBehaviour
 {
     PerspectiveManager perspectiveManager;
-    public AudioSource wobble;
     public Animator animator;
     //bool toneAble = false;
     // Start is called before the first frame update

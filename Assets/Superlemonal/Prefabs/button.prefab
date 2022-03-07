@@ -145,8 +145,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.998451, y: 0.25011587, z: 1.7917137}
-  m_Center: {x: 0.013561249, y: -0.120146275, z: 0}
+  m_Size: {x: 8.998451, y: 0.069114685, z: 1.7917137}
+  m_Center: {x: 0.013561249, y: -0.28722787, z: 0}
 --- !u!114 &2827594513185777725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,10 +164,8 @@ MonoBehaviour:
   sign: {fileID: 0}
   greenLight: {fileID: 2100000, guid: 9ed7c0aef786828499c67e4ce2a1dfdd, type: 2}
   redLight: {fileID: 2100000, guid: 696fd91810c7b4e40a3debc77f5cc645, type: 2}
-  originalGreen: {fileID: -2813467912831258332, guid: b1638d16507bd0c4ea0cce64d2d5502d,
-    type: 3}
-  originalRed: {fileID: -6629797300637803691, guid: b1638d16507bd0c4ea0cce64d2d5502d,
-    type: 3}
+  originalGreen: {fileID: 2100000, guid: 689e26f1b68c0174999bb86620acf934, type: 2}
+  originalRed: {fileID: 2100000, guid: afc47a3c2dfb81d4999050fd84976623, type: 2}
   gameObjectsInCollision:
   - {fileID: 0}
   - {fileID: 0}

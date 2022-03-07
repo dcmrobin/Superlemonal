@@ -169,7 +169,8 @@ public class PerspectiveManager : MonoBehaviour {
                 }
 
                 takenObject.transform.position = Vector3.Lerp(takenObject.transform.position, targetForTakenObjects.position + centerCorrection, Time.deltaTime * 5);
-                takenObject.transform.rotation = Quaternion.Lerp(takenObject.transform.rotation, Quaternion.Euler(new Vector3(0, lastRotationY + mainCamera.transform.eulerAngles.y, 0)), Time.deltaTime * 5);
+                takenObject.transform.rotation = Quaternion.Lerp(takenObject.transform.rotation, Quaternion.Euler(new Vector3(lastRotation.x, lastRotationY + mainCamera.transform.eulerAngles.y, lastRotation.z + mainCamera.transform.eulerAngles.z)), Time.deltaTime * 10);
+
                 
                 cosine = Vector3.Dot(ray.direction, hit.normal);
                 cameraHeight = Mathf.Abs(hit.distance * cosine);
