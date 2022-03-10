@@ -1,0 +1,10 @@
+Todo for superlemonal
+
+1.Imporove vending machine
+    1.Add sound effect for when vending a can
+    2.Maybe make it so that not all buttons are active
+    3.Make the vending machine whirring sound repeat
+2.Add rotating mechanic for when picking up an object
+3.Add footstep sounds
+4.Fix the no-objects door so that ABSOLUTELY NOTHING CAN GET THROUGH when holding an object
+5.

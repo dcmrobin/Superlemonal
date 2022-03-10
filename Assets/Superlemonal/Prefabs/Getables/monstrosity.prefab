@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3178797232328152968}
   - component: {fileID: 4313549713751585224}
   m_Layer: 0
-  m_Name: mouth
+  m_Name: monstrosity
   m_TagString: Getable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
