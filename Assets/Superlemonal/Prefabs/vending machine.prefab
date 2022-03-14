@@ -628,6 +628,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -1.28
       objectReference: {fileID: 0}
+    - target: {fileID: -3393059317818742671, guid: 515993ff669a5a64f8191f12f13db776,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1da634c5c95cbb34783a4fa46b41fa9e, type: 2}
     - target: {fileID: -1599826595754709761, guid: 515993ff669a5a64f8191f12f13db776,
         type: 3}
       propertyPath: m_TagString

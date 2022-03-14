@@ -30,6 +30,7 @@ public class PerspectiveManager : MonoBehaviour {
     private float distanceMultiplier;
     private Vector3 scaleMultiplier;
     private LayerMask layerMask = ~(1 << 8);
+    private int originalLayer;
     private float cameraHeight = 0;
     private float cosine;
     private float positionCalculation;
@@ -44,7 +45,6 @@ public class PerspectiveManager : MonoBehaviour {
     private Vector3 centerCorrection = Vector3.zero;
     private float takenObjSize = 0;
     private int takenObjSizeIndex = 0;
-
     void Start()
     {
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
@@ -105,7 +105,7 @@ public class PerspectiveManager : MonoBehaviour {
         {
             if (hit.transform.tag == "Getable")
             {
-                hit.transform.Find("invert").gameObject.SetActive(true);
+                hit.transform.gameObject.GetComponent<Outline>().enabled = true;
                 isGrabbing = true;
                 FMODUnity.RuntimeManager.PlayOneShot("event:/pop1");
                 takenObject = hit.transform.gameObject;
@@ -134,6 +134,7 @@ public class PerspectiveManager : MonoBehaviour {
                     //takenObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
                     //takenObject.GetComponent<MeshRenderer>().receiveShadows = false;
                 }
+                originalLayer = takenObject.layer;
                 takenObject.gameObject.layer = 8;
                 foreach (Transform child in takenObject.GetComponentsInChildren<Transform>())
                 {
@@ -388,7 +389,7 @@ public class PerspectiveManager : MonoBehaviour {
         //toneAble = false;
 
         takenObject.GetComponent<Rigidbody>().isKinematic = false;
-        takenObject.transform.Find("invert").gameObject.SetActive(false);
+        takenObject.GetComponent<Outline>().enabled = false;
 
         foreach (Collider col in takenObject.GetComponents<Collider>())
         {
@@ -401,12 +402,12 @@ public class PerspectiveManager : MonoBehaviour {
             //takenObject.GetComponent<MeshRenderer>().receiveShadows = true;
         }
         takenObject.transform.parent = null;
-        takenObject.gameObject.layer = 0;
+        takenObject.gameObject.layer = originalLayer;
         foreach (Transform child in takenObject.GetComponentsInChildren<Transform>())
         {
             takenObject.GetComponent<Rigidbody>().isKinematic = false;
             takenObject.GetComponent<Collider>().isTrigger = false;
-            child.gameObject.layer = 0;
+            child.gameObject.layer = originalLayer;
         }
 
         takenObject = null;

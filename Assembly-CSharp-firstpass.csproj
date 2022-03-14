@@ -143,6 +143,7 @@
      <Compile Include="Assets\Plugins\Standard Assets\Characters\RollerBall\Scripts\BallUserControl.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\ParticleSystems\Scripts\Hose.cs" />
+     <Compile Include="Assets\Plugins\QuickOutline\Scripts\Outline.cs" />
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
      <None Include="Assets\Plugins\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -171,6 +172,7 @@
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\_BloomAndFlares\BlendForBloom.shader" />
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+     <None Include="Assets\Plugins\QuickOutline\Resources\Shaders\OutlineMask.shader" />
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\ContrastComposite.shader" />
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\_Antialiasing\DLAA.shader" />
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\NoiseAndGrainDX11.shader" />
@@ -215,6 +217,7 @@
      <None Include="Assets\Plugins\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
      <None Include="Assets\Plugins\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularSmooth.shader" />
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\Plugins\QuickOutline\Readme.txt" />
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Shaders\DiffuseReflectiveShader.shader" />
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\NoiseAndGrain.shader" />
      <None Include="Assets\Plugins\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
@@ -249,6 +252,7 @@
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Shaders\SetAlpha.shader" />
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\SimpleClear.shader" />
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\Plugins\QuickOutline\Resources\Shaders\OutlineFill.shader" />
      <None Include="Assets\Plugins\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\_Antialiasing\SSAA.shader" />
@@ -486,7 +490,7 @@
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-        <HintPath>C:/Users/matsk/Documents/unity projects/superlemonal/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+        <HintPath>D:/unity projects/superlemonal/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
