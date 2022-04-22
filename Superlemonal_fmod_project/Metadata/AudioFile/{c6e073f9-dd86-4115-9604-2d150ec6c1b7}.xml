@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{c6e073f9-dd86-4115-9604-2d150ec6c1b7}">
+		<property name="assetPath">
+			<value>freezer-hum-1.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>60.287999999999997</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1b4e993c-546d-4b75-8744-0aa494b53c01}</destination>
+		</relationship>
+	</object>
+</objects>

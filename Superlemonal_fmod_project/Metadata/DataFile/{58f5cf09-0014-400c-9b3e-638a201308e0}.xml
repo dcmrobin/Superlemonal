@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="DataFile" id="{58f5cf09-0014-400c-9b3e-638a201308e0}">
+		<property name="note" />
+		<property name="assetPath">
+			<value>audiogaming_audiomotors_demo_engine.agp</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1b4e993c-546d-4b75-8744-0aa494b53c01}</destination>
+		</relationship>
+	</object>
+</objects>

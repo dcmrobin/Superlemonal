@@ -14,6 +14,7 @@ public class button : MonoBehaviour
     public Material originalGreen;
     public Material originalRed;
     public List<GameObject> gameObjectsInCollision;
+    public buttonCharacterController buttonCharacterControllerScript;
     //public AudioSource buttonSound;
     //public AudioSource doorSound;
 
@@ -29,9 +30,9 @@ public class button : MonoBehaviour
     {
         if (col.gameObject.GetComponent<Collider>().isTrigger == false)
         {
-            if (col.gameObject.CompareTag("Getable") && col.gameObject.GetComponent<Rigidbody>().isKinematic == false || col.gameObject.CompareTag("Player"))
+            if (col.gameObject.CompareTag("Getable") && col.gameObject.GetComponent<Rigidbody>().isKinematic == false)
             {
-                if (gameObjectsInCollision.Count == 0)
+                if (gameObjectsInCollision.Count == 0 && buttonCharacterControllerScript.gameObjectsInCollision.Count == 0)
                 {
                     buttonAnimationController.SetBool("bool", true);
                     doorAnimationController.SetBool("doorBool", true);
@@ -55,29 +56,24 @@ public class button : MonoBehaviour
 
     void OnTriggerExit(Collider col)
     {
-        /*if (col.gameObject.CompareTag("Player"))
+        if (col.gameObject.CompareTag("Getable"))
         {
             gameObjectsInCollision.RemoveAt(gameObjectsInCollision.Count - 1);
-        }
-        if (col.gameObject.CompareTag("Getable") && gameObjectsInCollision.Count > 1)
-        {
-            gameObjectsInCollision.RemoveAt(gameObjectsInCollision.Count - 1);
-        }*/
-        gameObjectsInCollision.RemoveAt(gameObjectsInCollision.Count - 1);
-        if (gameObjectsInCollision.Count == 0)
-        {
-            buttonAnimationController.SetBool("bool", false);
-            doorAnimationController.SetBool("doorBool", false);
-            buttonAnimationController.SetBool("bugfixerbool", true);
-            doorAnimationController.SetBool("bugfixerbool", true);
+            if (gameObjectsInCollision.Count == 0 && buttonCharacterControllerScript.gameObjectsInCollision.Count == 0)
+            {
+                buttonAnimationController.SetBool("bool", false);
+                doorAnimationController.SetBool("doorBool", false);
+                buttonAnimationController.SetBool("bugfixerbool", true);
+                doorAnimationController.SetBool("bugfixerbool", true);
+                
+                FMODUnity.RuntimeManager.PlayOneShot("event:/button");
+                FMODUnity.RuntimeManager.PlayOneShot("event:/door");
             
-            FMODUnity.RuntimeManager.PlayOneShot("event:/button");
-            FMODUnity.RuntimeManager.PlayOneShot("event:/door");
-        
-            mats[1] = redLight;
-            sign.GetComponent<MeshRenderer>().materials = mats;
-            mats[2] = originalGreen;
-            sign.GetComponent<MeshRenderer>().materials = mats;
+                mats[1] = redLight;
+                sign.GetComponent<MeshRenderer>().materials = mats;
+                mats[2] = originalGreen;
+                sign.GetComponent<MeshRenderer>().materials = mats;
+            }
         }
     }
 }

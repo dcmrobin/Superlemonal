@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{6e83fa82-157a-439c-be66-5fece79955e4}">
+		<property name="assetPath">
+			<value>pop1.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.1306122448979592</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1b4e993c-546d-4b75-8744-0aa494b53c01}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{1c5f02d0-c4db-45bf-b194-3babef94fd7f}">
+		<property name="assetPath">
+			<value>Stephan Siebert - In Between 26.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>249.2342857142857</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1b4e993c-546d-4b75-8744-0aa494b53c01}</destination>
+		</relationship>
+	</object>
+</objects>
