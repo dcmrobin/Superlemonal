@@ -1,15 +1,24 @@
 Todo for superlemonal
 
-1.Imporove vending machine
+1.Imporove vending machine ☆☆
     1.Add sound effect for when vending a can
     2.Maybe make it so that not all buttons are active
-2.Add rotating mechanic for when picking up an object
-3.Add footstep sounds
-4.Fix the no-objects door so that ABSOLUTELY NOTHING CAN GET THROUGH when holding an object
-5.Fix objects glitching into walls and other things when grabbed, possibly use Physics.OverlapBox for that
-6.Add easter eggs, collectibles and the like (later)
-7.Fix button bug
+
+2.Add rotating mechanic for when picking up an object ☆☆☆☆
+
+3.Add footstep sounds ☆☆☆
+
+4.Fix the no-objects door so that ABSOLUTELY NOTHING CAN GET THROUGH when holding an object (maybe add a timer that ☆☆☆☆
+  makes the door wait before opening fully, so as not to allow players from head-butting the object through the door.)
+
+5.Fix objects glitching into walls and other things when grabbed, possibly use Physics.OverlapBox for that ☆☆☆☆☆
+
+6.Add easter eggs, collectibles and the like (later) ☆
+
+7.Fix button bug ☆☆☆☆☆
     1.Objects are diong strange things when they are held over the button... might be something to do
       with the errors that I have'nt read yet...
-8.Find out a way to play FMODStudioEventEmitter components from code
-9.Fix the bug where the hand sprite moves to far up or down, resulting in an inacurate grabbing system
+
+8.Find out a way to play FMODStudioEventEmitter components from code ☆☆☆
+
+9.Fix the bug where the hand sprite moves to far up or down, resulting in an inacurate grabbing system ☆☆☆☆☆
