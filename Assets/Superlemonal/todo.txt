@@ -9,7 +9,7 @@ Todo for superlemonal
 5.Fix objects glitching into walls and other things when grabbed, possibly use Physics.OverlapBox for that
 6.Add easter eggs, collectibles and the like (later)
 7.Fix button bug
-    1.Figure out a way for the Character Controller to collide with small isTrigger colliders
-    2.Fix the grabbed object exiting the collider when placed on the button
+    1.Objects are diong strange things when they are held over the button... might be something to do
+      with the errors that I have'nt read yet...
 8.Find out a way to play FMODStudioEventEmitter components from code
-9.
+9.Fix the bug where the hand sprite moves to far up or down, resulting in an inacurate grabbing system

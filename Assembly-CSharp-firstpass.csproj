@@ -36,6 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Plugins\QuickOutline\Scripts\Outline.cs" />
      <Compile Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\PostEffectsBase.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\Vehicles\Car\Scripts\WheelEffects.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\Vehicles\Car\Scripts\CarSelfRighting.cs" />
@@ -143,7 +144,7 @@
      <Compile Include="Assets\Plugins\Standard Assets\Characters\RollerBall\Scripts\BallUserControl.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\ParticleSystems\Scripts\Hose.cs" />
-     <Compile Include="Assets\Plugins\QuickOutline\Scripts\Outline.cs" />
+     <Compile Include="Assets\Plugins\KawaseBlur\KawaseBlur.cs" />
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
      <None Include="Assets\Plugins\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -161,6 +162,7 @@
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\SunShaftsComposite.shader" />
+     <None Include="Assets\Plugins\KawaseBlur\KawaseBlur.shader" />
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\_DepthOfField\TiltShift.shader" />
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\_Antialiasing\FXAAPreset2.shader" />
@@ -173,6 +175,7 @@
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\_BloomAndFlares\BlendForBloom.shader" />
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\Plugins\QuickOutline\Resources\Shaders\OutlineMask.shader" />
+     <None Include="Assets\Plugins\Fake Interiors FREE\Examples\URP\Shaders URP\Props URP.shader" />
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\ContrastComposite.shader" />
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\_Antialiasing\DLAA.shader" />
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\NoiseAndGrainDX11.shader" />
@@ -241,6 +244,7 @@
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\ChromaticAberrationShader.shader" />
      <None Include="Assets\Plugins\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
+     <None Include="Assets\Plugins\Fake Interiors FREE\Examples\URP\Shaders URP\Fake Interiors Free URP.shader" />
      <None Include="Assets\Plugins\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
      <None Include="Assets\Plugins\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />

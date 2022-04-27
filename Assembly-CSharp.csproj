@@ -44,6 +44,7 @@
      <Compile Include="Assets\Portal\PortalCamera.cs" />
      <Compile Include="Assets\Autosave.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\SetVolume.cs" />
+     <Compile Include="Assets\Superlemonal\Scripts\buttonCharacterController.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\teleport.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\Superliminal.cs" />
@@ -51,7 +52,6 @@
      <Compile Include="Assets\Superlemonal\Scripts\noobject.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\PerspectiveManager.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\vendingButton.cs" />
-     <Compile Include="Assets\Superlemonal\Scripts\buttonCharacterController.cs" />
      <None Include="Assets\Superlemonal\todo.txt" />
      <None Include="Assets\Portal\ScreenCutoutShader.shader" />
      <None Include="Assets\Superlemonal\ScreenCutoutShader.shader" />

@@ -15,8 +15,7 @@ public class button : MonoBehaviour
     public Material originalRed;
     public List<GameObject> gameObjectsInCollision;
     public buttonCharacterController buttonCharacterControllerScript;
-    //public AudioSource buttonSound;
-    //public AudioSource doorSound;
+    //bool pressed = false;
 
     //[SerializeField] private string buttonPress = "ButtonPress";
 
@@ -35,6 +34,7 @@ public class button : MonoBehaviour
                 if (gameObjectsInCollision.Count == 0 && buttonCharacterControllerScript.gameObjectsInCollision.Count == 0)
                 {
                     buttonAnimationController.SetBool("bool", true);
+                    //pressed = true;
                     doorAnimationController.SetBool("doorBool", true);
                     buttonAnimationController.SetBool("bugfixerbool", false);
                     doorAnimationController.SetBool("bugfixerbool", false);
@@ -58,22 +58,26 @@ public class button : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Getable"))
         {
-            gameObjectsInCollision.RemoveAt(gameObjectsInCollision.Count - 1);
-            if (gameObjectsInCollision.Count == 0 && buttonCharacterControllerScript.gameObjectsInCollision.Count == 0)
-            {
-                buttonAnimationController.SetBool("bool", false);
-                doorAnimationController.SetBool("doorBool", false);
-                buttonAnimationController.SetBool("bugfixerbool", true);
-                doorAnimationController.SetBool("bugfixerbool", true);
+            //if (col.gameObject.GetComponent<Collider>().isTrigger == false && pressed == true)
+            //{
+                gameObjectsInCollision.RemoveAt(gameObjectsInCollision.Count - 1);
+                if (gameObjectsInCollision.Count == 0 && buttonCharacterControllerScript.gameObjectsInCollision.Count == 0)
+                {
+                    buttonAnimationController.SetBool("bool", false);
+                    //pressed = false;
+                    doorAnimationController.SetBool("doorBool", false);
+                    buttonAnimationController.SetBool("bugfixerbool", true);
+                    doorAnimationController.SetBool("bugfixerbool", true);
+                    
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/button");
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/door");
                 
-                FMODUnity.RuntimeManager.PlayOneShot("event:/button");
-                FMODUnity.RuntimeManager.PlayOneShot("event:/door");
-            
-                mats[1] = redLight;
-                sign.GetComponent<MeshRenderer>().materials = mats;
-                mats[2] = originalGreen;
-                sign.GetComponent<MeshRenderer>().materials = mats;
-            }
+                    mats[1] = redLight;
+                    sign.GetComponent<MeshRenderer>().materials = mats;
+                    mats[2] = originalGreen;
+                    sign.GetComponent<MeshRenderer>().materials = mats;
+                }
+            //}
         }
     }
 }
