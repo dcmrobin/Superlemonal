@@ -22,3 +22,5 @@ Todo for superlemonal
 8.Find out a way to play FMODStudioEventEmitter components from code ☆☆☆
 
 9.Fix the bug where the hand sprite moves to far up or down, resulting in an inacurate grabbing system ☆☆☆☆☆
+
+10.Add more details to the level ☆☆☆
