@@ -28,3 +28,5 @@ Todo for superlemonal
     All through the game (at least, the first level) there are doors which can't be opened. Right now I have not got
     anything behind them, but I'll add a room behind each of them, as part of an easter egg that players discover
     when they get the achievement. ☆☆☆
+
+12.Make the objects you grab have a fixed rotation when you are moving them up and down
