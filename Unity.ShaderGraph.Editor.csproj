@@ -72,8 +72,8 @@
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Data\Nodes\Artistic\Normal\NormalFromHeightNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Data\Implementation\IHasDependencies.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Generation\Processors\PropertyCollector.cs" />
-     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Generation\Enumerations\KeywordDefinition.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Data\Nodes\Input\Texture\SampleTexture2DArrayNode.cs" />
+     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Generation\Enumerations\KeywordDefinition.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Data\Nodes\IPropertyFromNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Generation\Descriptors\SubShaderDescriptor.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Data\Nodes\Utility\SubGraphNode.cs" />
@@ -509,8 +509,8 @@
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Data\Graphs\SerializableTexture.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Data\Graphs\MatrixShaderProperty.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Data\Implementation\SlotType.cs" />
-     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Drawing\Inspector\PropertyDrawers\GradientPropertyDrawer.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Drawing\Controls\TextureArrayControl.cs" />
+     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Drawing\Inspector\PropertyDrawers\GradientPropertyDrawer.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Drawing\Controls\ObjectControl.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Drawing\Colors\NoColors.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Drawing\Colors\ColorManager.cs" />
@@ -529,8 +529,8 @@
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Importers\ShaderGraphAssetPostProcessor.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Data\Util\SlotValueTypeUtil.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Data\Graphs\DynamicVectorMaterialSlot.cs" />
-     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Generation\Processors\ShaderSpliceUtil.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Data\Nodes\Math\Interpolation\LerpNode.cs" />
+     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Generation\Processors\ShaderSpliceUtil.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Data\ContextData.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Data\Nodes\Artistic\Normal\NormalFromTextureNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.5.0\Editor\Data\Nodes\Math\Round\RoundNode.cs" />
@@ -918,23 +918,23 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Plastic.Antlr3.Runtime">
-        <HintPath>C:/Users/matsk/Documents/unity projects/superlemonal/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+    <Reference Include="unityplastic">
+        <HintPath>D:/unity projects/superlemonal/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="log4netPlastic">
-        <HintPath>C:/Users/matsk/Documents/unity projects/superlemonal/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.NRefactory">
-        <HintPath>C:/Users/matsk/Documents/unity projects/superlemonal/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+        <HintPath>D:/unity projects/superlemonal/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-        <HintPath>C:/Users/matsk/Documents/unity projects/superlemonal/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+        <HintPath>D:/unity projects/superlemonal/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="unityplastic">
-        <HintPath>C:/Users/matsk/Documents/unity projects/superlemonal/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+    <Reference Include="Unity.Plastic.Antlr3.Runtime">
+        <HintPath>D:/unity projects/superlemonal/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+        <HintPath>D:/unity projects/superlemonal/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-        <HintPath>C:/Users/matsk/Documents/unity projects/superlemonal/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
+        <HintPath>D:/unity projects/superlemonal/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

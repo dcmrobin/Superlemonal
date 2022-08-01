@@ -8,19 +8,23 @@ Todo for superlemonal
 
 3.Add footstep sounds ☆☆☆
 
-4.Fix the no-objects door so that ABSOLUTELY NOTHING CAN GET THROUGH when holding an object (maybe add a timer that ☆☆☆☆
-  makes the door wait before opening fully, so as not to allow players from head-butting the object through the door.)
+4.Fix objects glitching into walls and other things when grabbed, possibly use Physics.OverlapBox for that ☆☆☆☆☆
 
-5.Fix objects glitching into walls and other things when grabbed, possibly use Physics.OverlapBox for that ☆☆☆☆☆
+5.Add easter eggs, collectibles and the like (later) ☆
 
-6.Add easter eggs, collectibles and the like (later) ☆
-
-7.Fix button bug ☆☆☆☆☆
+6.Fix button bug ☆☆☆☆☆
     1.Objects are diong strange things when they are held over the button... might be something to do
       with the errors that I have'nt read yet...
 
-8.Find out a way to play FMODStudioEventEmitter components from code ☆☆☆
+7.Find out a way to play FMODStudioEventEmitter components from code ☆☆☆
 
-9.Fix the bug where the hand sprite moves to far up or down, resulting in an inacurate grabbing system ☆☆☆☆☆
+8.Fix the bug where the hand sprite moves to far up or down, resulting in an inacurate grabbing system ☆☆☆☆☆
 
-10.Add more details to the level ☆☆☆
+9.Add more details to the levels ☆☆☆
+
+10.Achievements ☆☆☆
+
+11.Add something like when you get an achievement, all the doors in the game could be permanently open. ☆☆☆☆
+    All through the game (at least, the first level) there are doors which can't be opened. Right now I have not got
+    anything behind them, but I'll add a room behind each of them, as part of an easter egg that players discover
+    when they get the achievement. ☆☆☆

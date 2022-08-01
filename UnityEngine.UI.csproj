@@ -36,7 +36,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Toggle.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Text.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\GraphicRaycaster.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Image.cs" />
+     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\EventSystem\InputModules\StandaloneInputModule.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Layout\LayoutElement.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Selectable.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\VertexModifiers\Shadow.cs" />
@@ -58,7 +62,6 @@
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\EventSystem\EventSystem.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\StencilMaterial.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Culling\IClipRegion.cs" />
-     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\GraphicRaycaster.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\InputField.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\ToggleGroup.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\EventSystem\RaycastResult.cs" />
@@ -86,18 +89,15 @@
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Layout\GridLayoutGroup.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\EventSystem\InputModules\PointerInputModule.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\EventSystem\RaycasterManager.cs" />
-     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Toggle.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\IGraphicEnabledDisabled.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Slider.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Layout\HorizontalLayoutGroup.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\IMaskable.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\VertexModifiers\IMeshModifier.cs" />
-     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Text.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Animation\CoroutineTween.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Layout\CanvasScaler.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Layout\AspectRatioFitter.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Misc.cs" />
-     <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\EventSystem\InputModules\StandaloneInputModule.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\Scrollbar.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\FontUpdateTracker.cs" />
      <Compile Include="Library\PackageCache\com.unity.ugui@1.0.0\Runtime\UI\Core\ColorBlock.cs" />
@@ -350,20 +350,20 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Plastic.Antlr3.Runtime">
-        <HintPath>C:/Users/matsk/Documents/unity projects/superlemonal/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+    <Reference Include="unityplastic">
+        <HintPath>D:/unity projects/superlemonal/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="log4netPlastic">
-        <HintPath>C:/Users/matsk/Documents/unity projects/superlemonal/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.NRefactory">
-        <HintPath>C:/Users/matsk/Documents/unity projects/superlemonal/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+        <HintPath>D:/unity projects/superlemonal/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-        <HintPath>C:/Users/matsk/Documents/unity projects/superlemonal/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+        <HintPath>D:/unity projects/superlemonal/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="unityplastic">
-        <HintPath>C:/Users/matsk/Documents/unity projects/superlemonal/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+    <Reference Include="Unity.Plastic.Antlr3.Runtime">
+        <HintPath>D:/unity projects/superlemonal/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+        <HintPath>D:/unity projects/superlemonal/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

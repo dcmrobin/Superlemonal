@@ -52,6 +52,7 @@
      <Compile Include="Assets\Superlemonal\Scripts\noobject.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\PerspectiveManager.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\vendingButton.cs" />
+     <Compile Include="Assets\Superlemonal\Scripts\colliderIgnore.cs" />
      <None Include="Assets\Superlemonal\todo.txt" />
      <None Include="Assets\Portal\ScreenCutoutShader.shader" />
      <None Include="Assets\Superlemonal\ScreenCutoutShader.shader" />

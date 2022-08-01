@@ -88,6 +88,7 @@
      <Compile Include="Assets\Plugins\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
      <Compile Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Scripts\CaptureNormals.cs" />
      <Compile Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\ColorCorrectionCurves.cs" />
+     <Compile Include="Assets\Plugins\KawaseBlur\KawaseBlur.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\Vehicles\Car\Scripts\CarAudio.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\2D\Scripts\PlatformerCharacter2D.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\Utility\FPSCounter.cs" />
@@ -144,7 +145,6 @@
      <Compile Include="Assets\Plugins\Standard Assets\Characters\RollerBall\Scripts\BallUserControl.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\ParticleSystems\Scripts\Hose.cs" />
-     <Compile Include="Assets\Plugins\KawaseBlur\KawaseBlur.cs" />
      <None Include="Assets\Plugins\RobotLab\Robot-Lab-master\Assets\Image Effects\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
      <None Include="Assets\Plugins\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMPro.cginc" />

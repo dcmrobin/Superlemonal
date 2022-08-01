@@ -36,36 +36,36 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\FMOD\src\Editor\EditorEventRef.cs" />
-     <Compile Include="Assets\FMOD\src\Editor\CreateEventPopup.cs" />
-     <Compile Include="Assets\FMOD\src\Editor\EventReferenceUpdater.cs" />
-     <Compile Include="Assets\FMOD\src\Editor\BankRefreshWindow.cs" />
-     <Compile Include="Assets\FMOD\src\Editor\SettingsEditor.cs" />
-     <Compile Include="Assets\FMOD\src\Editor\EventCache.cs" />
-     <Compile Include="Assets\FMOD\src\Editor\BoltIntegration.cs" />
-     <Compile Include="Assets\FMOD\src\Editor\EditorUtils.cs" />
      <Compile Include="Assets\FMOD\src\Editor\LogViewer.cs" />
-     <Compile Include="Assets\FMOD\src\Editor\EditorSettings.cs" />
+     <Compile Include="Assets\FMOD\src\Editor\BankRefDrawer.cs" />
+     <Compile Include="Assets\FMOD\src\Editor\SettingsEditor.cs" />
+     <Compile Include="Assets\FMOD\src\Editor\EventManager.cs" />
+     <Compile Include="Assets\FMOD\src\Editor\FMODEventTrackEditor.cs" />
+     <Compile Include="Assets\FMOD\src\Editor\FindAndReplace.cs" />
+     <Compile Include="Assets\FMOD\src\Editor\BankRefreshWindow.cs" />
+     <Compile Include="Assets\FMOD\src\Editor\CreateEventPopup.cs" />
+     <Compile Include="Assets\FMOD\src\Editor\EventCache.cs" />
+     <Compile Include="Assets\FMOD\src\Editor\EventBrowser.cs" />
+     <Compile Include="Assets\FMOD\src\Editor\StudioParameterTriggerEditor.cs" />
+     <Compile Include="Assets\FMOD\src\Editor\EditorUtils.cs" />
      <Compile Include="Assets\FMOD\src\Editor\StudioBankLoaderEditor.cs" />
+     <Compile Include="Assets\FMOD\src\Editor\EventReferenceUpdater.cs" />
      <Compile Include="Assets\FMOD\src\Editor\FileReorganizer.cs" />
      <Compile Include="Assets\FMOD\src\Editor\FMODEventPlayableEditor.cs" />
-     <Compile Include="Assets\FMOD\src\Editor\StudioGlobalParameterTriggerEditor.cs" />
-     <Compile Include="Assets\FMOD\src\Editor\EventBrowser.cs" />
+     <Compile Include="Assets\FMOD\src\Editor\SetupWizard.cs" />
+     <Compile Include="Assets\FMOD\src\Editor\EditorSettings.cs" />
      <Compile Include="Assets\FMOD\src\Editor\ParamRefDrawer.cs" />
      <Compile Include="Assets\FMOD\src\Editor\EditorParamRef.cs" />
      <Compile Include="Assets\FMOD\src\Editor\EventRefDrawer.cs" />
-     <Compile Include="Assets\FMOD\src\Editor\BankRefDrawer.cs" />
-     <Compile Include="Assets\FMOD\src\Editor\StudioEventEmitterEditor.cs" />
      <Compile Include="Assets\FMOD\src\Editor\EditorBankRef.cs" />
-     <Compile Include="Assets\FMOD\src\Editor\BankRefresher.cs" />
-     <Compile Include="Assets\FMOD\src\Editor\SetupWizard.cs" />
-     <Compile Include="Assets\FMOD\src\Editor\EventManager.cs" />
      <Compile Include="Assets\FMOD\src\Editor\StudioListenerEditor.cs" />
-     <Compile Include="Assets\FMOD\src\Editor\ListView.cs" />
-     <Compile Include="Assets\FMOD\src\Editor\FMODEventTrackEditor.cs" />
-     <Compile Include="Assets\FMOD\src\Editor\StudioParameterTriggerEditor.cs" />
      <Compile Include="Assets\FMOD\src\Editor\StudioEventEmitterGizmoDrawer.cs" />
-     <Compile Include="Assets\FMOD\src\Editor\FindAndReplace.cs" />
+     <Compile Include="Assets\FMOD\src\Editor\StudioGlobalParameterTriggerEditor.cs" />
+     <Compile Include="Assets\FMOD\src\Editor\EditorEventRef.cs" />
+     <Compile Include="Assets\FMOD\src\Editor\StudioEventEmitterEditor.cs" />
+     <Compile Include="Assets\FMOD\src\Editor\BankRefresher.cs" />
+     <Compile Include="Assets\FMOD\src\Editor\ListView.cs" />
+     <Compile Include="Assets\FMOD\src\Editor\BoltIntegration.cs" />
      <None Include="Assets\FMOD\src\Editor\FMODUnityEditor.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -295,23 +295,23 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Plastic.Antlr3.Runtime">
-        <HintPath>C:/Users/matsk/Documents/unity projects/superlemonal/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+    <Reference Include="unityplastic">
+        <HintPath>D:/unity projects/superlemonal/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="log4netPlastic">
-        <HintPath>C:/Users/matsk/Documents/unity projects/superlemonal/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.NRefactory">
-        <HintPath>C:/Users/matsk/Documents/unity projects/superlemonal/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+        <HintPath>D:/unity projects/superlemonal/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-        <HintPath>C:/Users/matsk/Documents/unity projects/superlemonal/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+        <HintPath>D:/unity projects/superlemonal/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="unityplastic">
-        <HintPath>C:/Users/matsk/Documents/unity projects/superlemonal/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+    <Reference Include="Unity.Plastic.Antlr3.Runtime">
+        <HintPath>D:/unity projects/superlemonal/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+        <HintPath>D:/unity projects/superlemonal/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-        <HintPath>C:/Users/matsk/Documents/unity projects/superlemonal/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
+        <HintPath>D:/unity projects/superlemonal/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
