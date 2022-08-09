@@ -45,6 +45,7 @@ public class PerspectiveManager : MonoBehaviour {
     private Vector3 centerCorrection = Vector3.zero;
     private float takenObjSize = 0;
     private int takenObjSizeIndex = 0;
+    public placeHolder placeHolderScript;
     void Start()
     {
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
@@ -59,50 +60,14 @@ public class PerspectiveManager : MonoBehaviour {
         ray = mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2, (Screen.height / 2) + (Screen.height / 10), 0));
         Debug.DrawRay(ray.origin, ray.direction * 200, Color.yellow);
 
-        if (Physics.Raycast(ray, out hit, rayMaxRange, layerMask))
-        {
-            if (hit.transform.tag == "Getable" || hit.transform.tag == "PictureOnTheWall")
-            {
-                //pointer.GetComponent<MeshRenderer>().material = blueToon;
-                pointer.GetComponent<SpriteRenderer>().sprite = handaboutgrabby;
-            }
-            else
-            {
-                //pointer.GetComponent<MeshRenderer>().material = yellowToon;
-                pointer.GetComponent<SpriteRenderer>().sprite = handnograbby;
-            }
-            if (hit.transform.tag == "vendingButton")
-            {
-                if (hit.transform.gameObject.GetComponent<vendingButton>().hasBeenPressed == false)
-                {
-                    pointer.GetComponent<SpriteRenderer>().sprite = handaboutgrabby;
-                }
-            }
-            else if(hit.transform.tag == "vendingButton")
-            {
-                if (hit.transform.gameObject.GetComponent<vendingButton>().hasBeenPressed == false)
-                {
-                    //pointer.GetComponent<MeshRenderer>().material = yellowToon;
-                    pointer.GetComponent<SpriteRenderer>().sprite = handnograbby;
-                }
-            }
-        }
+        placeHolderScript.changeHandSprite(ray, hit, rayMaxRange, layerMask, pointer, handaboutgrabby, handnograbby, takenObject, handgrabby, targetForTakenObjects);
 
         isRayTouchingSomething = Physics.Raycast(ray, out hit, rayMaxRange, layerMask);  
 
-        if (takenObject != null)
-        {
-            //pointer.GetComponent<MeshRenderer>().material = redToon;
-            pointer.GetComponent<SpriteRenderer>().sprite = handgrabby;
-            //pop.Play();
-        }
-        else
-        {
-            targetForTakenObjects.position = hit.point;
-        }
-
         if ((Input.GetMouseButtonDown(0)) && isRayTouchingSomething)
         {
+            placeHolderScript.vend(ray, hit, isRayTouchingSomething, rayMaxRange, layerMask, objectmass);
+            placeHolderScript.drawSig(ray, hit, layerMask, signatureAble, pointer, handaboutgrabby, handnograbby, isRayTouchingSomething, gameobjecttodeactivate, signatureobject);
             if (hit.transform.tag == "Getable")
             {
                 hit.transform.gameObject.GetComponent<Outline>().enabled = true;
@@ -162,7 +127,6 @@ public class PerspectiveManager : MonoBehaviour {
         {
             if (takenObject != null)
             {
-                
                 // recenter the object to the center of the mesh regardless  real pivot point
                 if (takenObject.GetComponent<MeshRenderer>() != null)
                 {
@@ -206,176 +170,6 @@ public class PerspectiveManager : MonoBehaviour {
             if (takenObject != null)
             {
                 releaseObject();
-            }
-        }
-
-        if (Physics.Raycast(ray, out hit, 2, layerMask))
-        {
-            if (hit.transform.tag == "agreementpaper")
-            {
-                if (signatureAble)
-                {
-                    pointer.GetComponent<SpriteRenderer>().sprite = handaboutgrabby;
-                } else
-                {
-                    pointer.GetComponent<SpriteRenderer>().sprite = handnograbby;
-                }
-                if ((Input.GetMouseButtonDown(0)) && isRayTouchingSomething)
-                {
-                    if (hit.transform.tag == "agreementpaper")
-                    {
-                        if (signatureAble)
-                        {
-                            gameobjecttodeactivate.SetActive(false);
-                            signatureobject.SetActive(true);
-                            FMODUnity.RuntimeManager.PlayOneShot("event:/sig");
-                            signatureAble = false;
-                        }
-                    }
-                }
-            }
-        }
-
-        if ((Input.GetMouseButtonDown(0)) && isRayTouchingSomething && Physics.Raycast(ray, out hit, rayMaxRange, layerMask))
-        {
-            if (hit.transform.tag == "agreementpaper")
-            {
-                if (signatureAble)
-                {
-                    gameobjecttodeactivate.SetActive(false);
-                    signatureobject.SetActive(true);
-                    FMODUnity.RuntimeManager.PlayOneShot("event:/sig");
-                    signatureAble = false;
-                }
-            }
-
-            if (hit.transform.tag == "vendingButton")
-            {
-                if (hit.transform.gameObject.GetComponent<vendingButton>().can == vendingButton.canColor.Red)
-                {
-                    if (hit.transform.gameObject.GetComponent<vendingButton>().hasBeenPressed == false)
-                    {
-                        FMODUnity.RuntimeManager.PlayOneShot("event:/vendingButton");
-                        GameObject canObj = Instantiate(hit.transform.gameObject.GetComponent<vendingButton>().redCan, hit.transform.parent.Find("canSpawnPoint").gameObject.transform.position, Quaternion.identity);
-                        canObj.AddComponent<Rigidbody>();
-                        canObj.GetComponent<Rigidbody>().mass = objectmass;
-                        canObj.transform.eulerAngles = new Vector3(
-                            canObj.transform.eulerAngles.x + 90,
-                            canObj.transform.eulerAngles.y,
-                            canObj.transform.eulerAngles.z
-                        );
-                        hit.transform.gameObject.GetComponent<vendingButton>().hasBeenPressed = true;
-                        hit.transform.gameObject.GetComponentInChildren<MeshRenderer>().material = hit.transform.gameObject.GetComponent<vendingButton>().redMaterial;
-                    }
-                }
-
-                if (hit.transform.gameObject.GetComponent<vendingButton>().can == vendingButton.canColor.Green)
-                {
-                    if (hit.transform.gameObject.GetComponent<vendingButton>().hasBeenPressed == false)
-                    {
-                        FMODUnity.RuntimeManager.PlayOneShot("event:/vendingButton");
-                        GameObject canObj = Instantiate(hit.transform.gameObject.GetComponent<vendingButton>().greenCan, hit.transform.parent.Find("canSpawnPoint").gameObject.transform.position, Quaternion.identity);
-                        canObj.AddComponent<Rigidbody>();
-                        canObj.GetComponent<Rigidbody>().mass = objectmass;
-                        canObj.transform.eulerAngles = new Vector3(
-                            canObj.transform.eulerAngles.x + 90,
-                            canObj.transform.eulerAngles.y,
-                            canObj.transform.eulerAngles.z
-                        );
-                        hit.transform.gameObject.GetComponent<vendingButton>().hasBeenPressed = true;
-                        hit.transform.gameObject.GetComponentInChildren<MeshRenderer>().material = hit.transform.gameObject.GetComponent<vendingButton>().greenMaterial;
-                    }
-                }
-
-                if (hit.transform.gameObject.GetComponent<vendingButton>().can == vendingButton.canColor.Blue)
-                {
-                    if (hit.transform.gameObject.GetComponent<vendingButton>().hasBeenPressed == false)
-                    {
-                        FMODUnity.RuntimeManager.PlayOneShot("event:/vendingButton");
-                        GameObject canObj = Instantiate(hit.transform.gameObject.GetComponent<vendingButton>().blueCan, hit.transform.parent.Find("canSpawnPoint").gameObject.transform.position, Quaternion.identity);
-                        canObj.AddComponent<Rigidbody>();
-                        canObj.GetComponent<Rigidbody>().mass = objectmass;
-                        canObj.transform.eulerAngles = new Vector3(
-                            canObj.transform.eulerAngles.x + 90,
-                            canObj.transform.eulerAngles.y,
-                            canObj.transform.eulerAngles.z
-                        );
-                        hit.transform.gameObject.GetComponent<vendingButton>().hasBeenPressed = true;
-                        hit.transform.gameObject.GetComponentInChildren<MeshRenderer>().material = hit.transform.gameObject.GetComponent<vendingButton>().blueMaterial;
-                    }
-                }
-
-                if (hit.transform.gameObject.GetComponent<vendingButton>().can == vendingButton.canColor.Purple)
-                {
-                    if (hit.transform.gameObject.GetComponent<vendingButton>().hasBeenPressed == false)
-                    {
-                        FMODUnity.RuntimeManager.PlayOneShot("event:/vendingButton");
-                        GameObject canObj = Instantiate(hit.transform.gameObject.GetComponent<vendingButton>().purpleCan, hit.transform.parent.Find("canSpawnPoint").gameObject.transform.position, Quaternion.identity);
-                        canObj.AddComponent<Rigidbody>();
-                        canObj.GetComponent<Rigidbody>().mass = objectmass;
-                        canObj.transform.eulerAngles = new Vector3(
-                            canObj.transform.eulerAngles.x + 90,
-                            canObj.transform.eulerAngles.y,
-                            canObj.transform.eulerAngles.z
-                        );
-                        hit.transform.gameObject.GetComponent<vendingButton>().hasBeenPressed = true;
-                        hit.transform.gameObject.GetComponentInChildren<MeshRenderer>().material = hit.transform.gameObject.GetComponent<vendingButton>().purpleMaterial;
-                    }
-                }
-
-                if (hit.transform.gameObject.GetComponent<vendingButton>().can == vendingButton.canColor.LightBlue)
-                {
-                    if (hit.transform.gameObject.GetComponent<vendingButton>().hasBeenPressed == false)
-                    {
-                        FMODUnity.RuntimeManager.PlayOneShot("event:/vendingButton");
-                        GameObject canObj = Instantiate(hit.transform.gameObject.GetComponent<vendingButton>().lightblueCan, hit.transform.parent.Find("canSpawnPoint").gameObject.transform.position, Quaternion.identity);
-                        canObj.AddComponent<Rigidbody>();
-                        canObj.GetComponent<Rigidbody>().mass = objectmass;
-                        canObj.transform.eulerAngles = new Vector3(
-                            canObj.transform.eulerAngles.x + 90,
-                            canObj.transform.eulerAngles.y,
-                            canObj.transform.eulerAngles.z
-                        );
-                        hit.transform.gameObject.GetComponent<vendingButton>().hasBeenPressed = true;
-                        hit.transform.gameObject.GetComponentInChildren<MeshRenderer>().material = hit.transform.gameObject.GetComponent<vendingButton>().lightblueMaterial;
-                    }
-                }
-
-                if (hit.transform.gameObject.GetComponent<vendingButton>().can == vendingButton.canColor.Yellow)
-                {
-                    if (hit.transform.gameObject.GetComponent<vendingButton>().hasBeenPressed == false)
-                    {
-                        FMODUnity.RuntimeManager.PlayOneShot("event:/vendingButton");
-                        GameObject canObj = Instantiate(hit.transform.gameObject.GetComponent<vendingButton>().yellowCan, hit.transform.parent.Find("canSpawnPoint").gameObject.transform.position, Quaternion.identity);
-                        canObj.AddComponent<Rigidbody>();
-                        canObj.GetComponent<Rigidbody>().mass = objectmass;
-                        canObj.transform.eulerAngles = new Vector3(
-                            canObj.transform.eulerAngles.x + 90,
-                            canObj.transform.eulerAngles.y,
-                            canObj.transform.eulerAngles.z
-                        );
-                        hit.transform.gameObject.GetComponent<vendingButton>().hasBeenPressed = true;
-                        hit.transform.gameObject.GetComponentInChildren<MeshRenderer>().material = hit.transform.gameObject.GetComponent<vendingButton>().yellowMaterial;
-                    }
-                }
-
-                if (hit.transform.gameObject.GetComponent<vendingButton>().can == vendingButton.canColor.Orange)
-                {
-                    if (hit.transform.gameObject.GetComponent<vendingButton>().hasBeenPressed == false)
-                    {
-                        FMODUnity.RuntimeManager.PlayOneShot("event:/vendingButton");
-                        GameObject canObj = Instantiate(hit.transform.gameObject.GetComponent<vendingButton>().orangeCan, hit.transform.parent.Find("canSpawnPoint").gameObject.transform.position, Quaternion.identity);
-                        canObj.AddComponent<Rigidbody>();
-                        canObj.GetComponent<Rigidbody>().mass = objectmass;
-                        canObj.transform.eulerAngles = new Vector3(
-                            canObj.transform.eulerAngles.x + 90,
-                            canObj.transform.eulerAngles.y,
-                            canObj.transform.eulerAngles.z
-                        );
-                        hit.transform.gameObject.GetComponent<vendingButton>().hasBeenPressed = true;
-                        hit.transform.gameObject.GetComponentInChildren<MeshRenderer>().material = hit.transform.gameObject.GetComponent<vendingButton>().orangeMaterial;
-                    }
-                }
             }
         }
     }

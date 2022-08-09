@@ -32814,6 +32814,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1706751788}
     - target: {fileID: 11407386, guid: c3cea1914d420ef4597fceb5abe488c2, type: 3}
+      propertyPath: placeHolderScript
+      value: 
+      objectReference: {fileID: 1697835457}
+    - target: {fileID: 11407386, guid: c3cea1914d420ef4597fceb5abe488c2, type: 3}
       propertyPath: gameobjecttodeactivate
       value: 
       objectReference: {fileID: 1567776362}
@@ -39632,6 +39636,49 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1692370725}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1697835456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1697835458}
+  - component: {fileID: 1697835457}
+  m_Layer: 0
+  m_Name: PlaceHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1697835457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697835456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19501432237c27469420db932cd3f6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1697835458
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697835456}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 50.532722, y: -1.8993824, z: 29.56925}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1701264608
 GameObject:
   m_ObjectHideFlags: 0
@@ -46668,6 +46715,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 686157436805066458, guid: eb490f4acf0050141bbbab785b76a703,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1207902580188683485, guid: eb490f4acf0050141bbbab785b76a703,
         type: 3}
       propertyPath: m_Layer
@@ -46762,6 +46814,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9048473661670445979, guid: eb490f4acf0050141bbbab785b76a703,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
