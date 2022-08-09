@@ -60,14 +60,51 @@ public class PerspectiveManager : MonoBehaviour {
         ray = mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2, (Screen.height / 2) + (Screen.height / 10), 0));
         Debug.DrawRay(ray.origin, ray.direction * 200, Color.yellow);
 
-        placeHolderScript.changeHandSprite(ray, hit, rayMaxRange, layerMask, pointer, handaboutgrabby, handnograbby, takenObject, handgrabby, targetForTakenObjects);
+        if (Physics.Raycast(ray, out hit, rayMaxRange, layerMask))
+        {
+            if (hit.transform.tag == "Getable" || hit.transform.tag == "PictureOnTheWall")
+            {
+                //pointer.GetComponent<MeshRenderer>().material = blueToon;
+                pointer.GetComponent<SpriteRenderer>().sprite = handaboutgrabby;
+            }
+            else
+            {
+                //pointer.GetComponent<MeshRenderer>().material = yellowToon;
+                pointer.GetComponent<SpriteRenderer>().sprite = handnograbby;
+            }
+            if (hit.transform.tag == "vendingButton")
+            {
+                if (hit.transform.gameObject.GetComponent<vendingButton>().hasBeenPressed == false)
+                {
+                    pointer.GetComponent<SpriteRenderer>().sprite = handaboutgrabby;
+                }
+            }
+            else if(hit.transform.tag == "vendingButton")
+            {
+                if (hit.transform.gameObject.GetComponent<vendingButton>().hasBeenPressed == false)
+                {
+                    //pointer.GetComponent<MeshRenderer>().material = yellowToon;
+                    pointer.GetComponent<SpriteRenderer>().sprite = handnograbby;
+                }
+            }
+        }
 
         isRayTouchingSomething = Physics.Raycast(ray, out hit, rayMaxRange, layerMask);  
+
+        if (takenObject != null)
+        {
+            //pointer.GetComponent<MeshRenderer>().material = redToon;
+            pointer.GetComponent<SpriteRenderer>().sprite = handgrabby;
+            //pop.Play();
+        }
+        else
+        {
+            targetForTakenObjects.position = hit.point;
+        }
 
         if ((Input.GetMouseButtonDown(0)) && isRayTouchingSomething)
         {
             placeHolderScript.vend(ray, hit, isRayTouchingSomething, rayMaxRange, layerMask, objectmass);
-            placeHolderScript.drawSig(ray, hit, layerMask, signatureAble, pointer, handaboutgrabby, handnograbby, isRayTouchingSomething, gameobjecttodeactivate, signatureobject);
             if (hit.transform.tag == "Getable")
             {
                 hit.transform.gameObject.GetComponent<Outline>().enabled = true;
@@ -170,6 +207,33 @@ public class PerspectiveManager : MonoBehaviour {
             if (takenObject != null)
             {
                 releaseObject();
+            }
+        }
+
+        if (Physics.Raycast(ray, out hit, 2, layerMask))
+        {
+            if (hit.transform.tag == "agreementpaper")
+            {
+                if (signatureAble)
+                {
+                    pointer.GetComponent<SpriteRenderer>().sprite = handaboutgrabby;
+                } else
+                {
+                    pointer.GetComponent<SpriteRenderer>().sprite = handnograbby;
+                }
+                if ((Input.GetMouseButtonDown(0)) && isRayTouchingSomething)
+                {
+                    if (hit.transform.tag == "agreementpaper")
+                    {
+                        if (signatureAble)
+                        {
+                            gameobjecttodeactivate.SetActive(false);
+                            signatureobject.SetActive(true);
+                            FMODUnity.RuntimeManager.PlayOneShot("event:/sig");
+                            signatureAble = false;
+                        }
+                    }
+                }
             }
         }
     }
