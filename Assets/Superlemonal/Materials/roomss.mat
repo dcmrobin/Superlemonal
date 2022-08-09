@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: roomss
+  m_Shader: {fileID: 4800000, guid: 6c4ea63bf8213f9488b76032168d558b, type: 3}
+  m_ShaderKeywords: _KEYWORD1_ON _PROPLAYERTOGGLE_ON _SWITCHPLANE_ON _USEFACADETEXTURE_ON
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Back:
+        m_Texture: {fileID: 2800000, guid: 3cdcbb030ea3b7147bab2d5d38fc89be, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ceileing:
+        m_Texture: {fileID: 2800000, guid: 63bb90049cec6ac479388e696ef377d4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ceiling:
+        m_Texture: {fileID: 2800000, guid: f12438971f1ef65478bf3b3f12e0aab4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FacadeAlbedo:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FacadeSmoothness:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Floor:
+        m_Texture: {fileID: 2800000, guid: 402589dcd508b1f40abd9c444e32fab5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Props:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample1:
+        m_Texture: {fileID: 2800000, guid: e5e660bd44fcb5d498761b934c5f5f4e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample2:
+        m_Texture: {fileID: 2800000, guid: e5e660bd44fcb5d498761b934c5f5f4e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Wall:
+        m_Texture: {fileID: 2800000, guid: 3cdcbb030ea3b7147bab2d5d38fc89be, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaCutoff: 0.5
+    - _BackWallTexTiling: 0.1
+    - _BackWallTexTilling: 4
+    - _BackWallTile: 2
+    - _CeilingTexTiling: 0
+    - _CeilingTexTilling: 4
+    - _CeilingTile: 2
+    - _DisableFacade: 0
+    - _DisableFacadeTexture: 0
+    - _FacadeSmoothnessValue: 1
+    - _FacadeTexture: 0
+    - _FacadeTiling: 1
+    - _Float0: -1.57
+    - _Float1: -0.5
+    - _Float2: 0.2
+    - _FloorTexTiling: 0
+    - _FloorTexTilling: 4
+    - _FloorTile: 2
+    - _GlassSmoothness: 1.66
+    - _GlassSmoothnessMultiplier: 1.66
+    - _Keyword1: 1
+    - _PropLayerToggle: 1
+    - _PropsTexTiling: 0.1
+    - _PropsTexTilling: 1
+    - _RoomIntensity: 3
+    - _RoomTile: 0.1
+    - _Smoothness: 0
+    - _SmoothnessValue: 1
+    - _SwitchPlane: 1
+    - _TogglePropLayer: 0
+    - _ToggleSwitch0: 0
+    - _UseFacadeTexture: 1
+    - _WallTile: 2
+    - _WalltexTiling: 0.1
+    - _WalltexTilling: 4
+    - __dirty: 0
+    m_Colors:
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _PositionOffsetXYZroomsWprops: {r: 9, g: -2.5, b: 4.5, a: 0}
+    - _RoomColorTint: {r: 0.6603774, g: 0.61637276, b: 0.4579032, a: 0}
+    - _RoomsXYZPropsW: {r: 1, g: 1, b: 1, a: 1}
+    - _Vector0: {r: 0.93, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []
