@@ -18,15 +18,13 @@ Todo for superlemonal
 
 7.Find out a way to play FMODStudioEventEmitter components from code ☆☆☆
 
-8.Fix the bug where the hand sprite moves to far up or down, resulting in an inacurate grabbing system ☆☆☆☆☆
+8.Add more details to the levels ☆☆☆
 
-9.Add more details to the levels ☆☆☆
+9.Achievements ☆☆☆
 
-10.Achievements ☆☆☆
-
-11.Add something like when you get an achievement, all the doors in the game could be permanently open. ☆☆☆☆
+10.Add something like when you get an achievement, all the doors in the game could be permanently open. ☆☆☆☆
     All through the game (at least, the first level) there are doors which can't be opened. Right now I have not got
     anything behind them, but I'll add a room behind each of them, as part of an easter egg that players discover
     when they get the achievement. ☆☆☆
 
-12.Make the objects you grab have a fixed rotation when you are moving them up and down
+11.Make the objects you grab have a fixed rotation when you are moving them up and down

@@ -49,10 +49,10 @@ MonoBehaviour:
   signatureobject: {fileID: 0}
   isGrabbing: 0
   objectmass: 1e+10
-  handspriterenderer: {fileID: 7816377276543388885}
   handnograbby: {fileID: 21300000, guid: 2e37062015501244d8d9dee256fdd34e, type: 3}
   handaboutgrabby: {fileID: 21300000, guid: fe2bce6f57323db41a7bb2f8c6286d68, type: 3}
   handgrabby: {fileID: 21300000, guid: 83af81757b5f1cf46ae858720a5d375b, type: 3}
+  placeHolderScript: {fileID: 0}
 --- !u!1 &188970
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,7 +99,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2848046849234047048
 Transform:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@
 // GitHub: https://github.com/danielcmcg/Forced-Perspective-Illusion-Mechanic-for-Unity
 
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PerspectiveManager : MonoBehaviour {
     public GameObject gameobjecttodeactivate;
@@ -17,13 +18,14 @@ public class PerspectiveManager : MonoBehaviour {
     //public Material yellowToon;
     //public Material blueToon;
     //public Material redToon;
-    public SpriteRenderer handspriterenderer;
+    //public SpriteRenderer handspriterenderer;
     public Sprite handnograbby;
     public Sprite handaboutgrabby;
     public Sprite handgrabby;
     private Camera mainCamera;
     private Transform targetForTakenObjects;
-    private GameObject pointer;
+    public GameObject pointer;
+    //public Image pointer;
     private GameObject takenObject;
     private RaycastHit hit;
     private Ray ray;
@@ -50,14 +52,14 @@ public class PerspectiveManager : MonoBehaviour {
     {
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         targetForTakenObjects = GameObject.Find("targetForTakenObjects").transform;
-        pointer = GameObject.Find("Pointer");
-        pointer.transform.position = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width / 2, (Screen.height / 2) + (Screen.height / 10), 1));
-        pointer.transform.parent = mainCamera.transform;
+        //pointer = GameObject.Find("Pointer");
+        //pointer.transform.position = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width / 2, (Screen.height / 2) + (Screen.height / 10), 1));
+        //pointer.transform.parent = mainCamera.transform;
     }
 
     void Update()
     {
-        ray = mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2, (Screen.height / 2) + (Screen.height / 10), 0));
+        ray = mainCamera.ScreenPointToRay(new Vector3(Screen.width / 2, (Screen.height / 2.5f) + (Screen.height / 10), 0));
         Debug.DrawRay(ray.origin, ray.direction * 200, Color.yellow);
 
         if (Physics.Raycast(ray, out hit, rayMaxRange, layerMask))
@@ -65,18 +67,18 @@ public class PerspectiveManager : MonoBehaviour {
             if (hit.transform.tag == "Getable" || hit.transform.tag == "PictureOnTheWall")
             {
                 //pointer.GetComponent<MeshRenderer>().material = blueToon;
-                pointer.GetComponent<SpriteRenderer>().sprite = handaboutgrabby;
+                pointer.GetComponent<Image>().sprite = handaboutgrabby;
             }
             else
             {
                 //pointer.GetComponent<MeshRenderer>().material = yellowToon;
-                pointer.GetComponent<SpriteRenderer>().sprite = handnograbby;
+                pointer.GetComponent<Image>().sprite = handnograbby;
             }
             if (hit.transform.tag == "vendingButton")
             {
                 if (hit.transform.gameObject.GetComponent<vendingButton>().hasBeenPressed == false)
                 {
-                    pointer.GetComponent<SpriteRenderer>().sprite = handaboutgrabby;
+                    pointer.GetComponent<Image>().sprite = handaboutgrabby;
                 }
             }
             else if(hit.transform.tag == "vendingButton")
@@ -84,7 +86,7 @@ public class PerspectiveManager : MonoBehaviour {
                 if (hit.transform.gameObject.GetComponent<vendingButton>().hasBeenPressed == false)
                 {
                     //pointer.GetComponent<MeshRenderer>().material = yellowToon;
-                    pointer.GetComponent<SpriteRenderer>().sprite = handnograbby;
+                    pointer.GetComponent<Image>().sprite = handnograbby;
                 }
             }
         }
@@ -94,7 +96,7 @@ public class PerspectiveManager : MonoBehaviour {
         if (takenObject != null)
         {
             //pointer.GetComponent<MeshRenderer>().material = redToon;
-            pointer.GetComponent<SpriteRenderer>().sprite = handgrabby;
+            pointer.GetComponent<Image>().sprite = handgrabby;
             //pop.Play();
         }
         else
@@ -216,10 +218,10 @@ public class PerspectiveManager : MonoBehaviour {
             {
                 if (signatureAble)
                 {
-                    pointer.GetComponent<SpriteRenderer>().sprite = handaboutgrabby;
+                    pointer.GetComponent<Image>().sprite = handaboutgrabby;
                 } else
                 {
-                    pointer.GetComponent<SpriteRenderer>().sprite = handnograbby;
+                    pointer.GetComponent<Image>().sprite = handnograbby;
                 }
                 if ((Input.GetMouseButtonDown(0)) && isRayTouchingSomething)
                 {
