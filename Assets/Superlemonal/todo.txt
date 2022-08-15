@@ -27,3 +27,7 @@ Todo for superlemonal
 
 13.Portals ☆☆☆☆
     Portals that you can grab to make bigger and smaller, and portals that have a fixed size. Brackeys will help...
+
+14.An assist when getting onto a ledge ☆☆☆
+
+15.Make the sound effects YOURSELF ☆☆
