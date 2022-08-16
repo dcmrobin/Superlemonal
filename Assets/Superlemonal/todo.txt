@@ -31,3 +31,5 @@ Todo for superlemonal
 14.An assist when getting onto a ledge ☆☆☆
 
 15.Make the sound effects YOURSELF ☆☆
+
+16.Add signs that say things like "you shouldn't be here" around the place on the outside of the levels
