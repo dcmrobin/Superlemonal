@@ -5,10 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/Plugins/URPExample/Scenes/SampleScene.unity
+    guid: d1c3109bdb54ad54c8a2b2838528e640
   - enabled: 1
-    path: Assets/Superlemonal/Scenes/Start Menu.unity
-    guid: f1eafaa530194ee46b020198048e9cf3
-  - enabled: 1
-    path: Assets/Superlemonal/Scenes/SandBox.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Superlemonal/Scenes/Game.unity
+    guid: 3ee151f093b13384f8716e59b310ffc1
   m_configObjects: {}
