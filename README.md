@@ -1,5 +1,42 @@
 # Superlemonal
 A clone of Superliminal using Unity<br>
 
+# todo
+Todo for superlemonal
+
+1.Imporove vending machine ☆☆
+    1.Add sound effect for when vending a can
+    2.Maybe make it so that not all buttons are active
+
+2.Add rotating mechanic for when picking up an object ☆☆☆☆
+
+3.Add footstep sounds ☆☆☆
+
+4.Fix objects glitching into walls and other things when grabbed, possibly use Physics.OverlapBox for that ☆☆☆☆☆
+
+5.Add easter eggs, collectibles and the like (later) ☆
+
+8.Find out a way to play FMODStudioEventEmitter components from code ☆☆☆
+
+9.Add more details to the levels ☆☆☆
+
+10.Achievements ☆☆☆
+
+11.Add something like when you get an achievement, all the doors in the game could be permanently open. ☆☆☆
+    All through the game (at least, the first level) there are doors which can't be opened. Right now I have not got
+    anything behind them, but I'll add a room behind each of them, as part of an easter egg that players discover
+    when they get the achievement. ☆☆☆
+
+12.Make the objects you grab have fixed rotation, so that one side always faces you when you move it about
+
+13.Portals ☆☆☆☆
+    Portals that you can grab to make bigger and smaller, and portals that have a fixed size. Brackeys will help...
+
+14.An assist when getting onto a ledge ☆☆☆
+
+15.Make the sound effects YOURSELF ☆☆
+
+16.Add signs that say things like "you shouldn't be here" around the place on the outside of the levels
+
 # Credit
 https://github.com/danielcmcg/Forced-Perspective-Illusion-Mechanic-for-Unity
