@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Plugins/URPExample/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
   - enabled: 1
-    path: Assets/Superlemonal/Scenes/Game.unity
+    path: Assets/Superlemonal/Scenes/Gameold.unity
     guid: 3ee151f093b13384f8716e59b310ffc1
   m_configObjects: {}
