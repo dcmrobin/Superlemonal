@@ -48,6 +48,8 @@ public class PerspectiveManager : MonoBehaviour {
     private float takenObjSize = 0;
     private int takenObjSizeIndex = 0;
     public placeHolder placeHolderScript;
+    public enum grbmode{Normal, Rotating}
+    public grbmode grabMode = grbmode.Normal;
     void Start()
     {
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
@@ -161,7 +163,7 @@ public class PerspectiveManager : MonoBehaviour {
                 }
             }
         }
-
+    
         if (Input.GetMouseButton(0))
         {
             if (takenObject != null)
@@ -171,10 +173,13 @@ public class PerspectiveManager : MonoBehaviour {
                 {
                     centerCorrection = takenObject.transform.position - takenObject.GetComponent<MeshRenderer>().bounds.center;
                 }
-
+    
                 takenObject.transform.position = Vector3.Lerp(takenObject.transform.position, targetForTakenObjects.position + centerCorrection, Time.deltaTime * 5);
-                takenObject.transform.rotation = Quaternion.Lerp(takenObject.transform.rotation, Quaternion.Euler(new Vector3(lastRotation.x, lastRotationY + mainCamera.transform.eulerAngles.y, lastRotation.z)), Time.deltaTime * 10);
-
+                if (grabMode == grbmode.Normal)
+                {
+                    takenObject.transform.rotation = Quaternion.Lerp(takenObject.transform.rotation, Quaternion.Euler(new Vector3(lastRotation.x, lastRotationY + mainCamera.transform.eulerAngles.y, lastRotation.z)), Time.deltaTime * 10);
+                }
+    
                 
                 cosine = Vector3.Dot(ray.direction, hit.normal);
                 cameraHeight = Mathf.Abs(hit.distance * cosine);
@@ -203,6 +208,22 @@ public class PerspectiveManager : MonoBehaviour {
                 takenObject.transform.localScale = scaleMultiplier * (Vector3.Distance(mainCamera.transform.position, takenObject.transform.position) / distanceMultiplier);
             }
         }
+
+        /*if (isGrabbing)
+        {
+            float yRot = takenObject.transform.rotation.y;
+            Debug.Log(yRot);
+            HandleRotateObject(yRot);
+            if (Input.GetMouseButtonDown(1))
+            {
+                Debug.Log(yRot);
+                grabMode = grbmode.Rotating;
+            }
+            else if (Input.GetMouseButtonUp(1))
+            {
+                grabMode = grbmode.Normal;
+            }
+        }*/
 
         if (Input.GetMouseButtonUp(0))
         {
@@ -240,8 +261,20 @@ public class PerspectiveManager : MonoBehaviour {
         }
     }
 
+    public void HandleRotateObject(float Yrotation)
+    {
+        if (grabMode == grbmode.Rotating)
+        {
+            if (takenObject != null)
+            {
+                takenObject.transform.rotation = Quaternion.Euler(0, Yrotation + Input.GetAxis("Mouse X"), 0);
+            }
+        }
+    }
+
     public void releaseObject()
     {
+        grabMode = grbmode.Normal;
         isGrabbing = false;
 
         //toneAble = true;

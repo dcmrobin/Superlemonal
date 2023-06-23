@@ -26217,7 +26217,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1354002494}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1205242633}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 905d5b7ee2c7e7848ac59855cdd9ea1a, type: 3}
@@ -58944,6 +58944,11 @@ PrefabInstance:
       propertyPath: m_AllowMSAA
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5113406991100309939, guid: 390be3b8108f1844d845bef1ba031e02,
+        type: 3}
+      propertyPath: perspectiveManager
+      value: 
+      objectReference: {fileID: 1205242633}
     - target: {fileID: 5113406991108125075, guid: 390be3b8108f1844d845bef1ba031e02,
         type: 3}
       propertyPath: m_SkinWidth
@@ -63599,6 +63604,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6222265543603791826, guid: 089520721c0ac1f41b1c54fc5a4fd315,
     type: 3}
   m_PrefabInstance: {fileID: 1204952234}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1205242633 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 159860, guid: c3cea1914d420ef4597fceb5abe488c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1354002494}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1206217090
 PrefabInstance:
@@ -82797,6 +82808,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: maindoor (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8531433530061914551, guid: f275ec36a54cd52448c2a6a840c8c473,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

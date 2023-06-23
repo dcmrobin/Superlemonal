@@ -122,7 +122,6 @@
      <Compile Include="Assets\Plugins\Standard Assets\ParticleSystems\Scripts\AfterburnerPhysicsForce.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\SampleScenes\Scripts\SlowMoButton.cs" />
-     <Compile Include="Assets\Plugins\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\Vehicles\Car\Scripts\Suspension.cs" />
      <Compile Include="Assets\Plugins\Standard Assets\Cameras\Scripts\TargetFieldOfView.cs" />
