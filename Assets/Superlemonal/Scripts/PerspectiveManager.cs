@@ -220,12 +220,9 @@ public class PerspectiveManager : MonoBehaviour {
 
         /*if (isGrabbing)
         {
-            float yRot = takenObject.transform.rotation.y;
-            Debug.Log(yRot);
-            HandleRotateObject(yRot);
+            HandleRotateObject();
             if (Input.GetMouseButtonDown(1))
             {
-                Debug.Log(yRot);
                 grabMode = grbmode.Rotating;
             }
             else if (Input.GetMouseButtonUp(1))
@@ -270,13 +267,13 @@ public class PerspectiveManager : MonoBehaviour {
         }
     }
 
-    public void HandleRotateObject(float Yrotation)
+    public void HandleRotateObject()
     {
         if (grabMode == grbmode.Rotating)
         {
             if (takenObject != null)
             {
-                takenObject.transform.rotation = Quaternion.Euler(0, Yrotation + Input.GetAxis("Mouse X"), 0);
+                takenObject.transform.rotation = Quaternion.Euler(0, takenObject.transform.rotation.y + Input.GetAxis("Mouse X"), 0);
             }
         }
     }
