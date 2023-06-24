@@ -174,10 +174,10 @@ public class PerspectiveManager : MonoBehaviour {
                     centerCorrection = takenObject.transform.position - takenObject.GetComponent<MeshRenderer>().bounds.center;
                 }
     
-                takenObject.transform.position = Vector3.Lerp(takenObject.transform.position, targetForTakenObjects.position + centerCorrection, Time.deltaTime * 5);
+                takenObject.transform.position = targetForTakenObjects.position + centerCorrection;
                 if (grabMode == grbmode.Normal)
                 {
-                    takenObject.transform.rotation = Quaternion.Lerp(takenObject.transform.rotation, Quaternion.Euler(new Vector3(lastRotation.x, lastRotationY + mainCamera.transform.eulerAngles.y, lastRotation.z)), Time.deltaTime * 10);
+                    takenObject.transform.rotation = Quaternion.Euler(new Vector3(lastRotation.x, lastRotationY + mainCamera.transform.eulerAngles.y, lastRotation.z));
                 }
     
                 
@@ -185,6 +185,15 @@ public class PerspectiveManager : MonoBehaviour {
                 cameraHeight = Mathf.Abs(hit.distance * cosine);
                 
                 takenObjSize = takenObject.GetComponent<Collider>().bounds.size[takenObjSizeIndex];
+                
+                /*Collider[] colliders = Physics.OverlapBox(takenObject.transform.position, scaleMultiplier/2 * (Vector3.Distance(mainCamera.transform.position, takenObject.transform.position) / distanceMultiplier), takenObject.transform.rotation);
+                for (int i = 0; i < colliders.Length; i++)
+                {
+                    if (colliders[i] != takenObject.GetComponent<Collider>())
+                    {
+                        Debug.Log(colliders[i].name);
+                    }
+                }*/
                 
                 positionCalculation = (hit.distance * takenObjSize / 2) / (cameraHeight);
                 if (positionCalculation < rayMaxRange)
@@ -202,8 +211,8 @@ public class PerspectiveManager : MonoBehaviour {
                     lastHitPoint = mainCamera.transform.position + ray.direction * rayMaxRange;
                 }
                 
-                targetForTakenObjects.position = Vector3.Lerp(targetForTakenObjects.position, lastHitPoint
-                        - (ray.direction * lastPositionCalculation), Time.deltaTime * 10);
+                //targetForTakenObjects.position = Vector3.Lerp(targetForTakenObjects.position, lastHitPoint - (ray.direction * lastPositionCalculation), Time.deltaTime * 10);
+                targetForTakenObjects.position = lastHitPoint - (ray.direction * lastPositionCalculation);
                 
                 takenObject.transform.localScale = scaleMultiplier * (Vector3.Distance(mainCamera.transform.position, takenObject.transform.position) / distanceMultiplier);
             }

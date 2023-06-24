@@ -9,12 +9,15 @@ public class colliderIgnore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (objectToIgnore.GetComponent<Collider>() != null)
+        if (objectToIgnore != null)
         {
-            Physics.IgnoreCollision(objectToIgnore.GetComponent<Collider>(), gameObject.GetComponent<BoxCollider>());
-        } else
-        {
-            Physics.IgnoreCollision(objectToIgnore.GetComponent<CharacterController>(), gameObject.GetComponent<BoxCollider>());
+            if (objectToIgnore.GetComponent<Collider>() != null)
+            {
+                Physics.IgnoreCollision(objectToIgnore.GetComponent<Collider>(), gameObject.GetComponent<BoxCollider>());
+            } else
+            {
+                Physics.IgnoreCollision(objectToIgnore.GetComponent<CharacterController>(), gameObject.GetComponent<BoxCollider>());
+            }
         }
     }
 }
