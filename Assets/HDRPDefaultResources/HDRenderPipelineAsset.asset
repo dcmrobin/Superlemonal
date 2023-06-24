@@ -25,7 +25,7 @@ MonoBehaviour:
         m_Id: With3Levels
     supportVolumetrics: 1
     supportVolumetricClouds: 0
-    supportLightLayers: 0
+    supportLightLayers: 1
     supportWater: 0
     waterSimulationResolution: 128
     waterCPUSimulation: 0
