@@ -50,9 +50,11 @@
      <Compile Include="Assets\Autosave.cs" />
      <Compile Include="Assets\Portal\PortalTeleporter.cs" />
      <Compile Include="Assets\Portal\PortalCamera.cs" />
+     <Compile Include="Assets\Superlemonal\Scripts\loadingBar.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\PerspectiveManager.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\FirstPersonController.cs" />
+     <Compile Include="Assets\Superlemonal\Scripts\endCollider.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\Superliminal.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\placeHolder.cs" />
      <Compile Include="Assets\Superlemonal\Scripts\cutpiconwallmanager.cs" />

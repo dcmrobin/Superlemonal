@@ -31,7 +31,7 @@ public class PerspectiveManager : MonoBehaviour {
     private Ray ray;
     private float distanceMultiplier;
     private Vector3 scaleMultiplier;
-    private LayerMask layerMask = ~(1 << 8);
+    public LayerMask layerMask = ~(1 << 8);
     private int originalLayer;
     private float cameraHeight = 0;
     private float cosine;
