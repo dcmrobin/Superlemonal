@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8606861471350547658}
   - component: {fileID: -525577932514529793}
   - component: {fileID: -2247064094143527254}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pawn
   m_TagString: Getable
   m_Icon: {fileID: 0}

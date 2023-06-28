@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3661985990589680427}
   - component: {fileID: 35402601671260501}
   - component: {fileID: 3037360310605990392}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: canBlue
   m_TagString: Getable
   m_Icon: {fileID: 0}
@@ -150,6 +150,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -4312633703720092033, guid: 50e39ba7a2d07864886acf0e833dce26,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -2019057989763575071, guid: 50e39ba7a2d07864886acf0e833dce26,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -160,11 +165,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: can
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 50e39ba7a2d07864886acf0e833dce26,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1235042946065797846, guid: 50e39ba7a2d07864886acf0e833dce26,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ca87530ebb62d984cbf2e346613fe5e9, type: 2}
+    - target: {fileID: 1370382580622599599, guid: 50e39ba7a2d07864886acf0e833dce26,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

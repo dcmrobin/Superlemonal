@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 807444688170864645}
   - component: {fileID: -4112704770268077983}
   - component: {fileID: -2229142592621735860}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: woodPlank
   m_TagString: Getable
   m_Icon: {fileID: 0}

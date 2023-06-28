@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4898502952527755467}
   - component: {fileID: 6090466224985970051}
   - component: {fileID: 5260266341935389479}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 8764969375449276441}
   - component: {fileID: -5991112366850467271}
   - component: {fileID: 1000817137606330391}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: exitsignRight
   m_TagString: Getable
   m_Icon: {fileID: 0}

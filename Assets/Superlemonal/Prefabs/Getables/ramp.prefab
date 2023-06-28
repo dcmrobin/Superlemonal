@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2393582052170258267}
   - component: {fileID: 8153344901989889723}
   - component: {fileID: 7693204241986626419}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 3555381665755541744}
   - component: {fileID: -1405078557814706456}
   - component: {fileID: 2312304710580938447}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ramp
   m_TagString: Getable
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 5086738685638716098}
   - component: {fileID: 8332692066983795944}
   - component: {fileID: 7538092526579685904}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
