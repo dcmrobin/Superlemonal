@@ -173,8 +173,12 @@ public class PerspectiveManager : MonoBehaviour {
                 {
                     centerCorrection = takenObject.transform.position - takenObject.GetComponent<MeshRenderer>().bounds.center;
                 }
+                else if (takenObject.transform.GetChild(0).transform.GetChild(0).GetComponent<MeshRenderer>() != null)
+                {
+                    centerCorrection = takenObject.transform.position - takenObject.transform.GetChild(0).transform.GetChild(0).GetComponent<MeshRenderer>().bounds.center;
+                }
     
-                takenObject.transform.position = targetForTakenObjects.position + centerCorrection;
+                takenObject.transform.position = Vector3.Lerp(takenObject.transform.position, targetForTakenObjects.position + centerCorrection, Time.deltaTime * 5);
                 if (grabMode == grbmode.Normal)
                 {
                     if (takenObject.GetComponent<GettableObj>().rotationType == GettableObj.rotation.Free)
