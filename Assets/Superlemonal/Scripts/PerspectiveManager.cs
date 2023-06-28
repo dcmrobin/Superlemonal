@@ -194,7 +194,7 @@ public class PerspectiveManager : MonoBehaviour {
                 
                 takenObjSize = takenObject.GetComponent<Collider>().bounds.size[takenObjSizeIndex];
                 
-                /*Collider[] colliders = Physics.OverlapBox(takenObject.transform.position, scaleMultiplier/2 * (Vector3.Distance(mainCamera.transform.position, takenObject.transform.position) / distanceMultiplier), takenObject.transform.rotation);
+                /*Collider[] colliders = Physics.OverlapBox(takenObject.transform.position, new Vector3(takenObjSize/2, takenObjSize/2, takenObjSize/2), takenObject.transform.rotation);
                 for (int i = 0; i < colliders.Length; i++)
                 {
                     if (colliders[i] != takenObject.GetComponent<Collider>())
@@ -236,6 +236,7 @@ public class PerspectiveManager : MonoBehaviour {
             else if (Input.GetMouseButtonUp(1))
             {
                 lastRotation = takenObject.transform.rotation.eulerAngles;
+                lastRotationY = lastRotation.y - mainCamera.transform.eulerAngles.y;
                 grabMode = grbmode.Normal;
             }
         }
