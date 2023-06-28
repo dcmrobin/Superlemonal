@@ -7,7 +7,10 @@ public class unstableWall : MonoBehaviour
     private void OnCollisionEnter(Collision other) {
         if (!other.transform.CompareTag("Player") && other.transform.GetComponent<Rigidbody>() != null)
         {
-            gameObject.AddComponent<Rigidbody>();
+            if (gameObject.GetComponent<Rigidbody>() == null)
+            {
+                gameObject.AddComponent<Rigidbody>();
+            }
         }
     }
 }

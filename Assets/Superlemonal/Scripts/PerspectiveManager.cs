@@ -218,7 +218,7 @@ public class PerspectiveManager : MonoBehaviour {
             }
         }
 
-        /*if (isGrabbing)
+        if (isGrabbing)
         {
             HandleRotateObject();
             if (Input.GetMouseButtonDown(1))
@@ -227,9 +227,10 @@ public class PerspectiveManager : MonoBehaviour {
             }
             else if (Input.GetMouseButtonUp(1))
             {
+                lastRotation = takenObject.transform.rotation.eulerAngles;
                 grabMode = grbmode.Normal;
             }
-        }*/
+        }
 
         if (Input.GetMouseButtonUp(0))
         {
@@ -273,7 +274,8 @@ public class PerspectiveManager : MonoBehaviour {
         {
             if (takenObject != null)
             {
-                takenObject.transform.rotation = Quaternion.Euler(0, takenObject.transform.rotation.y + Input.GetAxis("Mouse X"), 0);
+                Vector3 objectRotation = new Vector3(takenObject.transform.rotation.eulerAngles.x, takenObject.transform.rotation.eulerAngles.y, takenObject.transform.rotation.eulerAngles.z);
+                takenObject.transform.eulerAngles = new Vector3(objectRotation.x, objectRotation.y + -Input.GetAxis("Mouse X") * 3, objectRotation.z);
             }
         }
     }
