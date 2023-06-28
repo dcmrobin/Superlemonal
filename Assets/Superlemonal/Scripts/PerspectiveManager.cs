@@ -166,6 +166,7 @@ public class PerspectiveManager : MonoBehaviour {
     
         if (Input.GetMouseButton(0))
         {
+            //targetForTakenObjects.transform.localScale = new Vector3(1, 1, 1);
             if (takenObject != null)
             {
                 // recenter the object to the center of the mesh regardless  real pivot point
@@ -178,11 +179,12 @@ public class PerspectiveManager : MonoBehaviour {
                     centerCorrection = takenObject.transform.position - takenObject.transform.GetChild(0).transform.GetChild(0).GetComponent<MeshRenderer>().bounds.center;
                 }
     
-                takenObject.transform.position = Vector3.Lerp(takenObject.transform.position, targetForTakenObjects.position + centerCorrection, Time.deltaTime * 5);
+                takenObject.transform.position = Vector3.Lerp(takenObject.transform.position, targetForTakenObjects.position + centerCorrection, Time.deltaTime * 20);
                 if (grabMode == grbmode.Normal)
                 {
                     if (takenObject.GetComponent<GettableObj>().rotationType == GettableObj.rotation.Free)
                     {
+                        targetForTakenObjects.transform.localScale = new Vector3(1, 1, 1);
                         targetForTakenObjects.transform.parent = null;
                         takenObject.transform.rotation = Quaternion.Euler(new Vector3(lastRotation.x, lastRotationY + mainCamera.transform.eulerAngles.y, lastRotation.z));
                     }
