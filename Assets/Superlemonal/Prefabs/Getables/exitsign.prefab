@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 2137690942265058481}
   - component: {fileID: 8764969375449276441}
   - component: {fileID: -5991112366850467271}
+  - component: {fileID: 1908102122419262323}
   m_Layer: 0
   m_Name: exitsign
   m_TagString: Getable
@@ -210,3 +211,16 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1908102122419262323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3520387136819628378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a56cdf9ddad5d6e48bd33e3745aec59f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationType: 0

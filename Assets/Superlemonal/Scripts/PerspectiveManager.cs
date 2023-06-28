@@ -177,7 +177,15 @@ public class PerspectiveManager : MonoBehaviour {
                 takenObject.transform.position = targetForTakenObjects.position + centerCorrection;
                 if (grabMode == grbmode.Normal)
                 {
-                    takenObject.transform.rotation = Quaternion.Euler(new Vector3(lastRotation.x, lastRotationY + mainCamera.transform.eulerAngles.y, lastRotation.z));
+                    if (takenObject.GetComponent<GettableObj>().rotationType == GettableObj.rotation.Free)
+                    {
+                        targetForTakenObjects.transform.parent = null;
+                        takenObject.transform.rotation = Quaternion.Euler(new Vector3(lastRotation.x, lastRotationY + mainCamera.transform.eulerAngles.y, lastRotation.z));
+                    }
+                    else if (takenObject.GetComponent<GettableObj>().rotationType == GettableObj.rotation.Fixed)
+                    {
+                        targetForTakenObjects.transform.parent = mainCamera.transform;
+                    }
                 }
     
                 

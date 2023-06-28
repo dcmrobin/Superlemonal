@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4292279945218839520}
   - component: {fileID: 2132293807262183088}
+  - component: {fileID: -2804319717776858927}
   m_Layer: 0
   m_Name: stopgo
   m_TagString: Untagged
@@ -54,6 +55,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.5691962, y: 2.0032103, z: 0.3392316}
   m_Center: {x: -0.17458344, y: -0.01, z: -0.089598775}
+--- !u!114 &-2804319717776858927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3520387136819628378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a56cdf9ddad5d6e48bd33e3745aec59f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationType: 1
 --- !u!1001 &7658305675958764173
 PrefabInstance:
   m_ObjectHideFlags: 0
