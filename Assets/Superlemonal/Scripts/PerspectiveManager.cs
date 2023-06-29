@@ -50,10 +50,14 @@ public class PerspectiveManager : MonoBehaviour {
     public placeHolder placeHolderScript;
     public enum grbmode{Normal, Rotating}
     public grbmode grabMode = grbmode.Normal;
+    FMOD.Studio.EventInstance pop1instance;
+    FMOD.Studio.EventInstance pop2instance;
     void Start()
     {
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         targetForTakenObjects = GameObject.Find("targetForTakenObjects").transform;
+        pop1instance = FMODUnity.RuntimeManager.CreateInstance("event:/pop1");
+        pop2instance = FMODUnity.RuntimeManager.CreateInstance("event:/pop2");
         //pointer = GameObject.Find("Pointer");
         //pointer.transform.position = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width / 2, (Screen.height / 2) + (Screen.height / 10), 1));
         //pointer.transform.parent = mainCamera.transform;
@@ -115,6 +119,8 @@ public class PerspectiveManager : MonoBehaviour {
                 isGrabbing = true;
                 FMODUnity.RuntimeManager.PlayOneShot("event:/pop1");
                 takenObject = hit.transform.gameObject;
+                //pop1instance.setPitch(takenObject.transform.localScale.magnitude);
+                //pop1instance.start();
 
                 distanceMultiplier = Vector3.Distance(mainCamera.transform.position, takenObject.transform.position);
                 scaleMultiplier = takenObject.transform.localScale;
@@ -302,6 +308,8 @@ public class PerspectiveManager : MonoBehaviour {
 
         //toneAble = true;
         FMODUnity.RuntimeManager.PlayOneShot("event:/pop2");
+        //pop2instance.setPitch(takenObject.transform.localScale.magnitude);
+        //pop2instance.start();
         //toneAble = false;
 
         takenObject.GetComponent<Rigidbody>().isKinematic = false;
