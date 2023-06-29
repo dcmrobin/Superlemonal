@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3661985990589680427}
   - component: {fileID: 8826524770083824135}
   - component: {fileID: -1097529116202952862}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: canYellow
   m_TagString: Getable
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ PrefabInstance:
     - target: {fileID: -4312633703720092033, guid: 50e39ba7a2d07864886acf0e833dce26,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -2019057989763575071, guid: 50e39ba7a2d07864886acf0e833dce26,
         type: 3}
@@ -168,7 +168,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 50e39ba7a2d07864886acf0e833dce26,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1235042946065797846, guid: 50e39ba7a2d07864886acf0e833dce26,
         type: 3}
@@ -178,7 +178,7 @@ PrefabInstance:
     - target: {fileID: 1370382580622599599, guid: 50e39ba7a2d07864886acf0e833dce26,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

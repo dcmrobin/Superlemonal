@@ -20,7 +20,7 @@ TagManager:
   - UI
   - 
   - PostProcessing
-  - Pickupable
+  - 
   - Player
   - StereoRender_Ignore
   - nolight

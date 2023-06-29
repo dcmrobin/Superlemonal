@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 484741868184235509}
   - component: {fileID: -5556965526185592033}
   - component: {fileID: 5026250837085543135}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Rook
   m_TagString: Getable
   m_Icon: {fileID: 0}

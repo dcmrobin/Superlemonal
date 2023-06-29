@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4292279945218839520}
   - component: {fileID: 2132293807262183088}
   - component: {fileID: -2804319717776858927}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: stopgo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ PrefabInstance:
     - target: {fileID: -3711905276421931297, guid: b1638d16507bd0c4ea0cce64d2d5502d,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b1638d16507bd0c4ea0cce64d2d5502d,
         type: 3}
@@ -144,7 +144,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b1638d16507bd0c4ea0cce64d2d5502d,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1856460705491078056, guid: b1638d16507bd0c4ea0cce64d2d5502d,
         type: 3}
@@ -164,12 +164,12 @@ PrefabInstance:
     - target: {fileID: 3141101260113499581, guid: b1638d16507bd0c4ea0cce64d2d5502d,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6824746026288583490, guid: b1638d16507bd0c4ea0cce64d2d5502d,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

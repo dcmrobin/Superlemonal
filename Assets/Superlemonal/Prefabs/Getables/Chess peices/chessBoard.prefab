@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3791424235198469519}
   - component: {fileID: -1214891031647347894}
   - component: {fileID: 3475961638604008612}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: chessBoard
   m_TagString: Getable
   m_Icon: {fileID: 0}
